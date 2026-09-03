@@ -1,0 +1,124 @@
+﻿ body
+        {
+            overflow-y: scroll;
+        }
+        .accordion-panel
+        {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: auto;
+            max-width: 95%;
+        }
+        .accordion-panel .accordion
+        {
+            padding-top: 30px;
+        }
+        .accordion-panel .accordion dt
+        {
+            display: block;
+            /*padding: 25px;*/
+            padding:15px;
+            background: #E7E4E4;
+            color: #555;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            font-family:chella;
+            font-size:15px;
+        }
+        
+        /*chell*/
+        .accordion-panel .accordion dt:hover
+        {           
+            background: #F4F7FA;
+            
+        }
+        
+        .accordion-panel .accordion dd
+        {
+            height: 0;
+            overflow: hidden;
+            transition: height .1s ease-out;
+            margin-left: 0;
+            margin-bottom: 1px;
+            background: #f6f6f6;
+            color:#666666;
+            font-family:chella;
+        }
+        .accordion-panel .accordion .content
+        {
+            padding-left: 15px;
+            overflow: auto;
+        }
+        .accordion-panel .plus-icon
+        {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            position: relative;
+            transition: transform 0.1s ease-out;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            
+        }
+        .accordion-panel .plus-icon:before, .accordion-panel .plus-icon:after
+        {
+            content: '';
+            background: #00579c;
+            position: absolute;
+        }
+        .accordion-panel .plus-icon:before
+        {
+            width: 2px;
+            height: 10px;
+            margin-left: -0.8px;
+            left: 50%;
+        }
+        .accordion-panel .plus-icon:after
+        {
+            width: 10px;
+            height: 2px;
+            margin-top: -0.8px;
+            top: 50%;
+            opacity: 1;
+            transition: opacity 0.1s ease-out;
+        }
+        
+        /*chell
+        .accordion-panel .accordion .is-open
+        {
+            background:#00579c;
+            color:#fff;
+        }*/
+        
+        .accordion-panel .is-open .plus-icon
+        {
+            transform: rotate(90deg);
+        }
+        .accordion-panel .is-open .plus-icon:after
+        {
+            opacity: 0;
+        }
+        .accordion-panel .hidden
+        {
+            display: none;
+        }
+        .accordion-panel .open-btn, .accordion-panel .close-btn
+        {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            width: 125px;
+            color:#00579c;
+            margin-top:8px;
+        }
+        .accordion-panel .buttons-wrapper
+        {
+            position: relative;
+        }
+        .accordion-panel .buttons-wrapper .plus-icon
+        {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }

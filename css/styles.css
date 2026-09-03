@@ -1,0 +1,1459 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #CCCCCC;
+    font-family: chella;
+}
+
+h2
+{
+    font-family: chella;
+    font-size: 120%;
+    color: #971410;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 10px;
+    height: 23px;
+}
+
+h3
+{
+    font-family: chella;
+    font-size: 100%;
+    color: #971410;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.yellowborderHM
+{
+    padding: 0px;
+    border: 1px solid #E1B561;
+    height: 56px;
+}
+
+.LGreenBorder
+{
+    border: 1px solid #4D4A06;
+}
+
+.Buleborder
+{
+    border: 1px solid #5c859a;
+}
+.gborder
+{
+    border: 1px solid Gray;
+    background-color: #ffffff;
+}
+
+
+.whiteBold
+{
+    font-family: chella;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btnBlue
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    border: solid 1px #a3cce0;
+    background: #6291a9;
+    height: 26px;
+}
+
+.DarkGreenText
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.blue
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #007ED1;
+    font-weight: bold;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+.Normaltext
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    padding-left: 5px;
+}
+
+.btnGreen
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    border: solid 1px #5f5c30;
+    background: #918d52;
+}
+
+.Rtxtalert
+{
+    font-family: chella;
+    font-size: 14px;
+    color: #BE0000;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+ol
+{
+    list-style-image: url(arrow1.png);
+}
+
+
+
+
+.hyphon
+{
+    font-family: "Trebuchet MS" , "Segoe UI" , Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 5px;
+}
+
+
+.Whitetext
+{
+    font-size: 11px;
+    font-family: Verdana, Arial, Trebuchet MS, Segoe UI, sans-serif, Helvetica;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0px 5px 0px 5px;
+}
+
+.brownhead
+{
+    font-family: chella;
+    font-size: 13px;
+    color: #69532C;
+    font-weight: bold;
+    padding: 5px 5px 2px 5px;
+    text-decoration: underline;
+}
+
+
+.Redboldtext
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #9F2925;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.Redboldbigtext
+{
+    font-family: chella;
+    font-size: 15px;
+    color: #9F2925;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+
+.bodytextbold1
+{
+    font-family: chella;
+    font-size: 15px;
+    color: #636363;
+    font-weight: normal;
+    /*padding: 1px 1px 1px 2px;*/   
+    line-height: 2em;
+}
+.bodytextbold11
+{
+    font-family: chella;
+    font-size: 15px;
+    color: #034489;
+    font-weight: normal;
+    /*padding: 10px 1px 1px 2px;*/
+}
+
+.bodytextbold2
+{
+    font-family: chella;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: normal;
+    /*padding: 1px 1px 1px 2px;*/
+}
+.bodytextboldNor
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+
+
+.redhead
+{
+    font-family: chella;
+    font-size: 20px;
+    color: #971410;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.RedText
+{
+    font-family: chella;
+    font-size: 13px;
+    color: Red;
+    font-weight: normal;
+    margin-left: 27px;
+}
+
+
+.violethead
+{
+    font-family: Trebuchet MS, Segoe UI, Arial, Verdana, sans-serif, Helvetica;
+    font-size: 17px;
+    color: #001A56;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+.DarkPinkhead
+{
+    font-family: chella;
+    font-size: 16px;
+    color: #01539C;
+    font-weight: bold;
+    padding-right:10px;
+}
+
+.DarkPinkheadPara
+{
+    background-color: #FFFFFF;
+    font-family: Trebuchet MS, Segoe UI, Arial, Verdana, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #000000;
+}
+
+.borderPink
+{
+    padding: 0px;
+    border: 3px solid #971410;
+    height: 56px;
+}
+
+
+.Ptag
+{
+    padding: 1px 2px 1px 5px;
+    text-align: left;
+}
+
+.highlightedaplicant
+{
+    font-family: Trebuchet MS, Segoe UI, Arial, Verdana, sans-serif, Helvetica;
+    font-size: 10px;
+    color: #971410;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.blackhead
+{
+    font-family: chella;
+    font-size: 13px;
+    color: #000000;
+    font-weight: bold;
+    padding: 5px 5px 2px 5px;
+}
+
+.bluehead
+{
+    font-family: chella;
+    font-size: 13px;
+    color: #32476A;
+    font-weight: bold;
+    padding: 5px 5px 2px 5px;
+}
+
+
+.blackhead1
+{
+    font-family: chella;
+    font-size: 18px;
+    color: #414B56;
+    font-weight: bold;
+    padding: 5px 5px 2px 5px;
+}
+
+.boldtext
+{
+    font-family: chella;
+    font-size: 14px;
+    color: #000000;
+    font-weight: normal;
+    padding-left: 5px;
+    margin-left: 0px;
+}
+
+
+.boldtext2
+{
+    font-family: chella;
+    font-size: 11px;
+    color: #000000;
+    font-weight: normal;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+
+.yellowborder
+{
+    padding: 0px;
+    /*border: 2px solid #034489;*/
+    border: 1px solid #da251c;
+    height: 56px;
+    width: 68%;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.aplcntbrdr
+{
+    padding: 0px;
+    border: 1px solid #034489;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.accordiantbl
+{
+    padding: 0px;
+    border: none;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.datalistbrdr
+{
+    /*background-color: #FFE4E1;*/
+    background-color: #e6f2ff;
+}
+
+.aplcntbrdr1
+{
+    background-color: #e7e5e5;
+    border: 1px solid #babdc0;
+    border-radius: 5px;
+}
+
+
+.yborder
+{
+    padding: 0px;
+    border: 1px solid #BB5011;
+    height: 56px;
+    margin-left: 0px;
+}
+
+.yellowborder1
+{
+    padding: 0px;
+    border: 1px solid #034489;
+    height: 56px;
+    width: 50%;
+    margin-left: 0px;
+}
+
+.yellowborder2
+{
+    border: 1px solid #034489;
+    height: 56px;
+}
+
+.whiteborder
+{
+    border: 1px solid #FFFFFF;
+}
+
+wborder1
+{
+    padding: 0px;
+    border: 1px solid #E8D5B2;
+}
+
+.greenborder
+{
+    border: 1px solid #ADAF5F;
+}
+
+.LRedBorder
+{
+    border: 1px solid #dbdada;
+}
+
+.lblalert
+{
+    font-family: chella;
+    font-size: 15px;
+    color: #01539C;
+    font-weight: normal;
+    text-align: left;
+   
+}
+
+.lblalert1
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #BE0000;
+    font-weight: normal;
+    background-color: #FFFF66;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.redlinkBold
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #B00000;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+}
+
+.note
+{
+    font-family: chella;
+    font-size: 11px;
+    color: Red;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px;
+}
+.link
+{
+     color: #fff;
+    font-family: chella;
+    font-size: 15px;
+    font-weight: normal;
+}
+.redlink
+{
+    font-family: chella;
+    font-size: 13px;
+    color: #D00000;
+    font-weight: 700;
+    padding: 5px 10px 5px 10px;
+    text-decoration: underline;
+}
+a.redlink:hover
+{
+    text-decoration: underline;
+    color: #FF8A00;
+}
+a.redlink:active
+{
+    text-decoration: none;
+}
+
+
+.redlink1
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial;
+    font-size: 15px;
+    font-weight: bold;
+    color: #9F2925;
+    font-weight: 700;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+a.redlink1:hover
+{
+    text-decoration: underline;
+    color: #2B40DC;
+}
+a.redlink1:active
+{
+    text-decoration: none;
+}
+
+
+.bluelink
+{
+    font-family: Segoe UI, Trebuchet MS, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #007ED1;
+    font-weight: normal;
+    padding: 5px 10px 5px 5px;
+}
+a.bluelink:link
+{
+    text-decoration: none;
+}
+a.bluelink:visited
+{
+    text-decoration: none;
+}
+a.bluelink:hover
+{
+    text-decoration: underline;
+    color: #333333;
+}
+a.bluelink:active
+{
+    text-decoration: none;
+}
+
+.bluelink1
+{
+    font-family: Segoe UI, Trebuchet MS, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 13px;
+    color: #0000E7;
+    font-weight: normal;
+    padding: 5px 10px 5px 5px;
+}
+a.bluelink1:link
+{
+    text-decoration: underline;
+}
+
+.bluelink2
+{
+    font-family: Segoe UI, Trebuchet MS, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px 10px 5px 5px;
+}
+a.bluelink2:link
+{
+    text-decoration: none;
+}
+a.bluelink2:visited
+{
+    text-decoration: none;
+}
+a.bluelink2:active
+{
+    text-decoration: none;
+}
+
+.lineshade
+{
+    background-image: url(lineshade.gif);
+    background-repeat: repeat-x;
+}
+
+
+ul#nav
+{
+    /* navigation list */
+    margin: 0px 0 5px 0; /* the 53px is where the nav begins (margin top) */
+    padding: 0;
+    list-style: none inside;
+}
+
+ul#nav li
+{
+    float: left;
+    display: block;
+}
+
+ul#nav li a
+{
+    width: 170px;
+    margin: 1px 0 0 0; /* a little top margin */
+    border: 0;
+    border-left: 10px solid #9F2925;
+    padding: 10px 4px;
+    font-family: chella;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    color: #450F1F;
+    background: #F0CC85;
+}
+
+ul#nav li a#current
+{
+    border-color: #fff;
+}
+/* current page, move id in the xhtml when creating a new page */
+
+ul#nav li a:hover
+{
+    background: #78662E;
+    color: #fff;
+}
+
+
+.whitehead
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 90%;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.alert
+{
+    font-family: chella;
+    font-size: 10px;
+    color: #BE0000;
+    font-weight: bold;
+    text-align: left;
+}
+
+.bodytext
+{
+    font-family: chella;
+    font-size: 14px;
+    color: #636363;
+    font-weight: normal;
+    line-height: 2em;
+    padding: 5px 10px 5px 10px;
+}
+
+.bodytextbold
+{
+    font-family: chella;
+    font-size: 14px;
+    color: #666666;
+    font-weight: normal;
+   /* padding: 5px 10px; */
+    text-align: left;
+}
+
+.bodytextNote
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.JntAc
+{
+    font-family: Arial;
+    font-size: 16px;
+    color: #000000;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.bodytextboldright
+{
+    font-family: Arial , Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px;
+    margin-left: 40px;
+    text-align: right;
+}
+
+
+.bodytextbigbold
+{
+    font-family: Arial , Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+/*
+hr
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    height: 1px;
+    width: 91%;
+    background-color: #E4E4E4;
+    color: #E4E4E4;
+}
+*/
+
+
+.copyright
+{
+    font-family: Tahoma, Trebuchet MS, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 8px;
+    color: #333333;
+    font-weight: normal;
+    padding: 3px 20px 5px 5px;
+}
+
+.greenlink
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 13px;
+    color: #009900;
+    font-weight: bold;
+    padding: 2px 2px 2px 0px;
+}
+
+a.greenlink:link
+{
+    text-decoration: none;
+}
+a.greenlink:visited
+{
+    text-decoration: none;
+}
+a.greenlink:hover
+{
+    text-decoration: none;
+    color: #009000;
+}
+a.greenlink:active
+{
+    text-decoration: none;
+}
+
+
+.greytext
+{
+    font-family: Verdana, Segoe UI, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #626262;
+    font-weight: normal;
+    padding: 3px 3px 3px 8px;
+}
+
+.session
+{
+    font-family: Verdana, Segoe UI, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #007ED1;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+
+.session1
+{
+    font-family: Segoe UI, Trebuchet MS, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #007ED1;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+/*.txtbox
+{
+    border: 1px solid #666666;
+    border-radius: 5px;
+    height: 33px;
+    text-indent: 2px;
+    font-family: chella;
+    font-size: 14px;
+    color: #666666;
+}*/
+
+.txtboxbond
+{
+    /*font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;     font-size: 11px;     color: #000000;     font-weight: normal;     text-align: left;     border: 1px solid #a5acb2;     padding-left: 1px;     width: 105px;*/
+    border: 1px solid #666666;
+    border-radius: 5px;
+    height: 33px;
+    width: 220px;
+   /* padding: 3px;*/
+    font-family: chella;
+    font-size: 14px;
+    color: #666666;
+}
+
+.txtboxAmount
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #000000;
+    font-weight: normal;
+    text-align: right;
+    border: 1px solid #a5acb2;
+    padding-left: 1px;
+    width: 105px;
+}
+
+.ddl
+{
+    /*font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;     font-size: 11px;     color: #000000;     font-weight: normal;     padding-left: 1px;*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    color: #717171;
+    height: 30px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    padding-right: 18px !important;
+    padding-top: 1px;
+    width: 225px;
+}
+
+.ddl1
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+
+.btn
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    border: solid 1px #D98B1F;
+    background: #F6B964;
+    height: 27px;
+}
+
+
+
+.btn1
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    border: solid 1px #016AC7;
+    background: #009BDD;
+    height: 27px;
+}
+
+
+.bluelink
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #007ED1;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+}
+a.bluelink:link
+{
+    text-decoration: none;
+}
+a.bluelink:visited
+{
+    text-decoration: none;
+}
+a.bluelink:hover
+{
+    text-decoration: underline;
+    color: #B00000;
+}
+a.bluelink:active
+{
+    text-decoration: none;
+}
+
+
+
+/* 
+fieldset
+{
+    _position: relative; /* The underscore means only IE will see it  
+    _padding-top: 20px; /* Stupid IE  
+    _padding-bottom: 15px;
+    _display: block;
+    border: 1px solid #F3E2CC;
+    width: 40em;
+    background-color: #FFFEF5;
+    margin-bottom: 15px;
+}
+*/
+
+fieldset
+{
+    _padding-top: 20px;
+    _padding-bottom: 15px;
+    _display: block;
+    border: 1px solid #808080;
+    margin-bottom: 15px;
+}
+
+legend
+{
+    _position: absolute;
+    _top: -10px;
+    font-weight: normal;
+    font-size: 19px;
+    color: #fff;
+    background: #034489;
+    border: solid 1px #034489;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.address
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 5px 50px 5px 20px;
+}
+
+
+.logout
+{
+    font-family: Segoe UI, Trebuchet MS, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 14px;
+    color: #971410;
+    font-weight: bold;
+}
+
+.log
+{
+    background: url(log.gif) repeat-x;
+}
+
+.hd
+{
+    background: url(bg_h.gif) repeat-x;
+}
+
+.headtext
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #36505E;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.bdarkgreen
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 14px;
+    color: #067282;
+    font-weight: bold;
+    padding: 2px 2px 2px 0px;
+}
+
+.darkgreen1
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 16px;
+    color: #053B43;
+    font-weight: bold;
+    padding: 2px 2px 2px 0px;
+}
+
+.Errmsg
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #FF0000;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.darkgreen
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 13px;
+    color: #067282;
+    font-weight: bold;
+    padding: 2px 2px 2px 0px;
+}
+
+
+
+.copyright
+{
+    font-family: "Lucida Grande" , Arial, Verdana, Trebuchet MS;
+    font-size: 12px;
+    color: #fff;
+}
+/*.footer
+{
+    background-image: url(footer-bg.jpg);
+    background-repeat: repeat-x;
+}
+*/
+.button
+{
+    border: 1px solid #034489;
+    border-radius: 5px;
+    background-color: #034489;
+    font-family: Trebuchet MS, Arial;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+}
+.button:hover
+{
+    background-color: #ee1c24;
+    border: 1px solid #ee1c24;
+}
+
+.Lalign
+{
+    text-align: left;
+}
+
+
+.lblAcDtlApFont
+{
+    font-size: 15px;
+    color: #034489;
+    /*background-color: #e7e5e5;*/
+    height: 30px;
+    padding-left: 5px;
+    width: 20%;
+    font-family: chella;
+}
+
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.Ndisplay
+{
+    display: none;
+}
+.updateProgress
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ee1c24;
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 260px;
+    height: 73px;
+    margin: 0 auto;
+    top: 1079px;
+    left: 0px;
+}
+
+
+.Grid
+{
+    table-layout: fixed;
+    width: 15em;
+}
+
+.DtitTD
+{
+    background: #FFF url(bg_t1.gif) repeat-x;
+    height: 30px;
+    padding: 5px 0 0 0px;
+    margin: 0;
+}
+.Dtit
+{
+    background: #FFF url(bg_t1.gif) repeat-x;
+    height: 30px; /*padding: 5px 0 0 0px;*/
+    margin: 0;
+}
+.Dtit span
+{
+    background: url(Dtit.png) no-repeat left;
+    line-height: 22px;
+    padding: 1px 10px 0 23px;
+    margin: 5px;
+    font-family: chella;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: normal;
+}
+
+.DPinkhead
+{
+    font-family: chella;
+    font-size: 13px;
+    color: #52060A;
+    font-weight: bold;
+    padding: 5px 5px 2px 5px;
+}
+
+
+
+.DOrangehead
+{
+    font-family: chella;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: normal;
+    padding: 5px 5px 2px 5px;
+}
+
+.dorangeborder
+{
+    border: 1px solid #BB5011;
+}
+
+
+
+.dorangeborder
+{
+    border: 1px solid #BB5011;
+    width: 95%;
+}
+
+e
+{
+    background-image: url('close.png');
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.info, .success, .warning, .error, .validation
+{
+    font-family: chella;
+    background-repeat: no-repeat;
+    /*
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-position: 10px center;
+    font-size: 12px;*/
+}
+.info
+{
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('info.png');
+}
+.success
+{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('success.png');
+}
+.warning
+{
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('warning.png');
+}
+.error
+{
+    color: #666666;
+    border: 1px solid red;
+    /*background-color: #FFBABA;
+    background-image: url('error.png');*/
+}
+
+
+.toptext
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 11px;
+    color: #000000;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+
+
+
+
+.nbtn
+{
+    font-family: chella;
+    text-decoration: none;
+    font-size: 14px !important;
+    line-height: 16px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    color: #ffffff;
+    -moz-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -khtml-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.nbtn:hover
+{
+    color: #FEEFDA;
+    border-color: #666;
+}
+.nbtn
+{
+    background: #BA302B url(../images/white-grad.png) repeat-x scroll left top;
+}
+.nbtn:active
+{
+    background: #eee url(../images/white-grad-active.png) repeat-x scroll left top;
+}
+
+.headblue
+{
+    font-family: chella;
+    font-size: 13px;
+    font-weight: 700;
+    color: #971410;
+    padding-left: 5px;
+}
+
+.bordergrey
+{
+    border: 1px solid #D6D6D6;
+}
+
+.lblman
+{
+    font-family: chella;
+    font-size: 14px;
+    color: #FF2333;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 1px;
+    height: 18px;
+    padding-left: 2px;
+}
+
+/*.rblist
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 15px;
+	color: #004684;
+	text-decoration: none;
+	height: 50px;
+	font-weight: bold;
+	vertical-align: middle;
+	line-height: 40px;
+	padding-left: 5px;
+}*/
+.rblist
+{
+    font-family: chella;
+    font-size: 11px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.PHBg
+{
+    border: 1px solid #f4686b;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em; /*background-color: #FFBABA;*/
+    background-color: #e6f2ff;
+}
+
+.PHtext
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #ee1c24;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.ErrorMsg
+{
+    font-family: chella;
+    font-size: 14px;
+    background-image: url(../images/info1.png);
+    background-repeat: no-repeat;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 5px;
+}
+
+/*Middle Name Tooltip*/
+.MNtooltip-container
+{
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    left: 5px;
+}
+.MNicon
+{
+    width: 14px; /* Adjust the width and height of the icon */
+    height: 14px;
+    background-color: #ee1c24; /* Background color of the icon */
+    border-radius: 50%; /* Make it a circle */
+    position: relative;
+}
+.MNicon:before
+{
+    content: "i"; /* Content of the icon */
+    font-style: normal; /* Prevent the browser from using italic style */
+    font-weight: bold; /* Make the icon bold */
+    font-size: 14px; /* Adjust the font size of the icon */
+    color: #fff; /* Icon color */
+    text-align: center;
+    line-height: 24px; /* Center the icon vertically */
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+.MNtooltip
+{
+    visibility: hidden;
+    width: 160px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: calc(100% + 10px); /* Position the tooltip above the text with some spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.MNtooltip::before
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Transparent border with a colored bottom border */
+    transform: translateX(-50%);
+}
+.MNtooltip-container:hover .MNtooltip
+{
+    visibility: visible;
+    opacity: 1;
+}
+/*End middle Name Tooltip*/
+
+/*chellappa*/
+/*.txtbwidth
+{
+    width: 50%;
+    padding: 3px;
+}
+.lblwidth
+{
+    width: 50%;
+}
+.sselectbox1
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    color: #717171;
+    height: 30px;
+    width: 65px;
+}
+
+.txtbox11
+{
+    width: 350px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #dddddd; 
+}
+
+.Ustxtbox
+{
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    height: 25px;
+    width: 70px;
+}
+.search_btn
+{
+    background: #006cb8 none repeat scroll 0 0;
+    border: 1px solid #006cb8;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Open Sans" ,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    outline: 0 none;
+    padding: 5px 10px;
+}
+.Utxtbox
+{
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    height: 25px;
+    width: 230px;
+}
+
+
+.rbl_txt
+{
+    color: #636363;
+    font-family: "Open Sans" ,sans-serif;
+    font-size: 15px;
+}
+
+.Agree
+{
+    color: Red;
+}
+.para_txt
+{
+    color: #323334;
+    font-size: 18px;
+}
+*/
+/*
+.lblalign
+{
+    margin-left: -6px;
+}*/

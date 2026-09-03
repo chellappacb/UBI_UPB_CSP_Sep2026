@@ -1,0 +1,267 @@
+﻿ .CustomValidatorCalloutStyle div, .CustomValidatorCalloutStyle td
+        {
+            border: solid 1px #d9241b;
+            background-color: #fff8c8;
+            color: Black;
+            left: 60% !important;
+        }
+
+
+
+
+.ajax__validatorcallout div, .ajax__validatorcallout td 
+{
+    border: solid 1px red;
+    background-color: #c7e2ff !important;
+    border-top: 1px solid red;
+border-bottom: 1px solid red;
+border-right: 1px solid red;
+border-left: 1px solid red;
+}
+.ajax__validatorcallout_popup_table 
+{
+    /*border:solid 1px red !important;*/
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    width: 250px !important;
+    }
+.ajax__validatorcallout_popup_table_row 
+{
+    vertical-align:top !important;
+    height:100% !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    }
+.ajax__validatorcallout_callout_cell 
+{
+    width:20px !important;
+    height:100% !important;
+    text-align:right !important;
+    vertical-align:top !important;
+    border:none !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    }
+.ajax__validatorcallout_callout_table 
+{
+    height:100% !important;
+    border:none !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    }
+.ajax__validatorcallout_callout_table_row 
+{
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    }
+   /* .ajax__validatorcallout_callout_table_row td
+{
+    background-color:#fff !important;
+    }*/
+.ajax__validatorcallout_callout_arrow_cell 
+{
+    padding:8px 0px 0px 0px !important;
+    margin:0px !important;
+    text-align:right !important;
+    vertical-align:top !important;
+    font-size:1px !important;
+    border:none !important;
+    background-color:#fff !important;
+}
+.ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv 
+{
+    font-size:1px !important;
+    position:relative !important;
+    left:1px !important;
+    border-bottom:none;
+    border-right:none;
+    border-left:none;
+    width:15px !important;
+ background-color:#fff !important;
+ padding:0px !important;
+ margin:0px !important;
+ }
+.ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv div 
+{
+    height:1px !important;
+    overflow:hidden !important;
+    border-top:none;
+    border-bottom:none;
+    border-right:none;
+    padding:0px !important;
+    margin:0px 0px 0px auto !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_leftpos 
+{
+    padding:8px 0px 0px 0px !important;
+    margin:0px !important;
+    text-align:left !important;
+    vertical-align:top !important;
+    font-size:1px !important;
+    border:none;
+    background-color:transparent;}
+.ajax__validatorcallout_callout_arrow_cell_leftpos .ajax__validatorcallout_innerdiv 
+{
+    font-size:1px !important;
+    position:relative !important;
+    left:-1px !important;
+    border-bottom:none !important;
+    border-right:none !important;
+    border-left:none !important;
+    width:15px !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_leftpos .ajax__validatorcallout_innerdiv div 
+{
+    height:1px !important;
+    overflow:hidden !important;
+    border-top:none !important;
+    border-bottom:none !important;
+    border-left:none !important;
+    padding:0px !important;
+    margin:0px auto 0px 0px !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_bottomleftpos,.ajax__validatorcallout_callout_arrow_cell_topleftpos 
+{
+    padding:0px 0px 0px 8px !important;
+    margin:0px !important;
+    text-align:left !important;
+    vertical-align:top !important;
+    font-size:1px !important;
+    border:none !important;
+    background-color:transparent !important;
+ }
+.ajax__validatorcallout_callout_arrow_cell_bottomrightpos,.ajax__validatorcallout_callout_arrow_cell_toprightpos 
+{
+    padding:0px 8px 0px 0px !important;
+    margin:0px !important;
+    text-align:right !important;
+    vertical-align:top !important;
+    font-size:1px !important;
+    border:none !important;
+    background-color:transparent !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_bottomleftpos .ajax__validatorcallout_innerdiv 
+{
+    font-size:1px !important;
+    position:relative !important;
+    bottom:-1px !important;
+    border:none !important;
+    width:30px !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_bottomrightpos .ajax__validatorcallout_innerdiv 
+{
+    font-size:1px !important;
+    position:relative !important;
+    bottom:-1px !important;
+    border:none !important;
+    width:30px !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px 0px 0px auto !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_topleftpos .ajax__validatorcallout_innerdiv 
+{
+    font-size:1px !important;
+    position:relative !important;
+    top:-1px !important;
+    border:none !important;
+    width:30px !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px !important;
+ }
+.ajax__validatorcallout_callout_arrow_cell_toprightpos .ajax__validatorcallout_innerdiv 
+{
+    font-size:1px !important;
+    position:relative !important;
+    top:-1px !important;
+    border:none !important;
+    width:30px !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px 0px 0px auto !important;
+ }
+.ajax__validatorcallout_callout_arrow_cell_bottomleftpos .ajax__validatorcallout_innerdiv div,.ajax__validatorcallout_callout_arrow_cell_bottomrightpos .ajax__validatorcallout_innerdiv div,.ajax__validatorcallout_callout_arrow_cell_topleftpos .ajax__validatorcallout_innerdiv div,.ajax__validatorcallout_callout_arrow_cell_toprightpos .ajax__validatorcallout_innerdiv div 
+{
+    height:1px !important;
+    overflow:hidden !important;
+    border-top:none !important;
+    border-bottom:none !important;
+    padding:0px !important;
+    margin:0px auto 0px auto !important;
+    }
+.ajax__validatorcallout_callout_arrow_cell_bottomleftpos .ajax__validatorcallout_innerdiv .arrowpixel,.ajax__validatorcallout_callout_arrow_cell_bottomrightpos .ajax__validatorcallout_innerdiv .arrowpixel,.ajax__validatorcallout_callout_arrow_cell_topleftpos .ajax__validatorcallout_innerdiv .arrowpixel,.ajax__validatorcallout_callout_arrow_cell_toprightpos .ajax__validatorcallout_innerdiv .arrowpixel 
+{
+    height:0px !important;
+    overflow:hidden !important;
+    border-top:none !important;
+    border-right:none !important;
+    border-left:none !important;
+    border-bottom-style:solid !important;
+    border-bottom-width:1px !important;
+    background-color:transparent !important;
+    padding:0px !important;
+    margin:0px auto 0px auto !important;
+    }
+.ajax__validatorcallout_error_message_cell 
+{
+    font-family: chella !important;
+    font-size : 14px !important;
+    padding:0px !important;
+    border-right:none !important;
+    border-left:none !important;
+    width:100% !important;
+    font-weight: bold !important;
+    color: #d9241b !important;
+    background-color: #cae4ff;
+    vertical-align: middle !important;
+    
+ }
+.ajax__validatorcallout_icon_cell 
+{
+    width:20px !important;
+    padding:5px !important;
+    margin:0px !important;
+    border-right:none !important;
+    background-color: #cae4ff;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+}
+.ajax__validatorcallout_close_button_cell 
+{
+    vertical-align:top !important;
+    padding:1px !important;
+    margin:0px !important;
+    text-align:right !important;
+    border-left:none !important;
+    background-color: #cae4ff;
+        border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+ }
+.ajax__validatorcallout_close_button_cell .ajax__validatorcallout_innerdiv 
+{
+    border:none !important;
+    text-align:center !important;
+    width:10px !important;
+    padding:2px !important;
+    cursor:pointer !important;
+ }
+.ajax__calendar_container TD {
+    font-size: 9px !important;
+}
+
+a.disabled-link {
+    color: gray;
+}

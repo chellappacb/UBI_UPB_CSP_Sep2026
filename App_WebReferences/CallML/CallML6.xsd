@@ -1,0 +1,4366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:schema xmlns:tns="urn:callcredit.co.uk/soap:callmlapi6" elementFormDefault="qualified" targetNamespace="urn:callcredit.co.uk/soap:callmlapi6" xmlns:s="http://www.w3.org/2001/XMLSchema">
+  <s:annotation>
+    <s:documentation>CallML v6.1.1.3 System Schema</s:documentation>
+    <s:appinfo>
+      <s:major xmlns:s="http://www.w3.org/2001/XMLSchema">6</s:major>
+      <s:minor xmlns:s="http://www.w3.org/2001/XMLSchema">1</s:minor>
+      <s:build xmlns:s="http://www.w3.org/2001/XMLSchema">1</s:build>
+      <s:revision xmlns:s="http://www.w3.org/2001/XMLSchema">3</s:revision>
+    </s:appinfo>
+  </s:annotation>
+  <s:element name="Search06b">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="searchDefinition" type="tns:callmlsearch6_1" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:complexType name="callmlsearch6_1">
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="parameters" nillable="true" type="tns:CallMLParameters6" />
+      <s:element minOccurs="0" maxOccurs="1" name="results" type="tns:CallMLResults6" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="CallMLParameters6">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="primarysearch" type="tns:mlprimarysearch" />
+      <s:element minOccurs="0" maxOccurs="1" name="ipaddress">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="15" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="overridedecision" type="tns:overridedecision" />
+      <s:element minOccurs="0" maxOccurs="1" name="subsequentsearch" type="tns:subsequentsearch" />
+      <s:element minOccurs="0" maxOccurs="1" name="addresslinksearch" type="tns:addresslinksearch" />
+      <s:element minOccurs="0" maxOccurs="1" name="yourreference">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="mlprimarysearch">
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="searchpurpose" type="tns:searchpurpose" />
+      <s:element minOccurs="1" maxOccurs="1" name="applicant" nillable="true" type="tns:applicant" />
+      <s:element minOccurs="0" maxOccurs="1" name="demographics" type="tns:applicantdemographics" />
+      <s:element minOccurs="1" maxOccurs="1" name="searchdirectors" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="excludesharegroups">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="excludeshareaccounttypes">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="350" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="identities" type="tns:ArrayOfIdentity" />
+      <s:element minOccurs="1" maxOccurs="1" name="minchecks" type="s:int" />
+      <s:element minOccurs="1" maxOccurs="1" name="usebai" type="s:boolean" />
+      <s:element minOccurs="1" maxOccurs="1" name="useccj" type="s:boolean" />
+      <s:element minOccurs="1" maxOccurs="1" name="usehcj" type="s:boolean" />
+      <s:element minOccurs="1" maxOccurs="1" name="useer" type="s:boolean" />
+      <s:element minOccurs="1" maxOccurs="1" name="usesettledaccounts" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="settledaccountmonths" type="s:int" />
+      <s:element minOccurs="1" maxOccurs="1" name="useukinvestors" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="decisionwarning">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="24" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="valueaddedservices" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="excludeownshare">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="200" />
+            <s:minLength value="3" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="picklist" type="tns:picklist" />
+      <s:element minOccurs="0" maxOccurs="1" name="numsearches" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="timeframeofsearch" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="searchtelephone" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="telephonedata" type="s:int" />
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="searchpurpose">
+    <s:restriction base="s:string">
+      <s:enumeration value="AP" />
+      <s:enumeration value="AQ" />
+      <s:enumeration value="IP" />
+      <s:enumeration value="IQ" />
+      <s:enumeration value="ML" />
+      <s:enumeration value="MP" />
+      <s:enumeration value="TS" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="applicant">
+    <s:annotation>
+      <s:documentation>A set of requested name and address details for an applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="name" nillable="true" type="tns:name">
+        <s:annotation>
+          <s:documentation>Contains name information</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="aliases" type="tns:ArrayOfName">
+        <s:annotation>
+          <s:documentation>Alias Information for the applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" nillable="true" type="tns:address">
+        <s:annotation>
+          <s:documentation>Applicant Current Address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="previousaddress" type="tns:address">
+        <s:annotation>
+          <s:documentation>Applicant Previous Address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="addrlessthan12months" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="dateofbirth" type="s:date">
+        <s:annotation>
+          <s:documentation>Date Of Birth</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="telephone" type="tns:telephone">
+        <s:annotation>
+          <s:documentation>Telephone. 
+ XML Block containing details of the telephone number
+</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="name">
+    <s:annotation>
+      <s:documentation>Contains name information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="title" nillable="true">
+        <s:annotation>
+          <s:documentation>Title. Mandatory</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="forename" nillable="true">
+        <s:annotation>
+          <s:documentation>First name. Must be full first name, not just initials</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:annotation>
+          <s:documentation>Other names or initials. If supplied, the initial must be a middle initial</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="surname" nillable="true">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfName">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="name" nillable="true" type="tns:name" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="address">
+    <s:annotation>
+      <s:documentation>Address Details as entered by the user</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="abodeno">
+        <s:annotation>
+          <s:documentation>Abode Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingno">
+        <s:annotation>
+          <s:documentation>Building Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="12" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingname">
+        <s:annotation>
+          <s:documentation>Building Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street1">
+        <s:annotation>
+          <s:documentation>Street 1</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street2">
+        <s:annotation>
+          <s:documentation>Street 2</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="sublocality">
+        <s:annotation>
+          <s:documentation>Sub Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="locality">
+        <s:annotation>
+          <s:documentation>Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="posttown">
+        <s:annotation>
+          <s:documentation>Post Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="25" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="premiseno">
+        <s:annotation>
+          <s:documentation>Premise Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="premisename">
+        <s:annotation>
+          <s:documentation>Premise Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Post Code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="addresstype" type="tns:inputaddresstype">
+        <s:annotation>
+          <s:documentation>Address Type (short/long)</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="inputaddresstype">
+    <s:restriction base="s:string">
+      <s:enumeration value="short" />
+      <s:enumeration value="long" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="addresslinkaddress">
+    <s:annotation>
+      <s:documentation>Address details</s:documentation>
+    </s:annotation>
+    <s:complexContent mixed="false">
+      <s:extension base="tns:address">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice" />
+        </s:sequence>
+      </s:extension>
+    </s:complexContent>
+  </s:complexType>
+  <s:complexType name="ArrayOfNotice">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="notice" nillable="true" type="tns:notice" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="notice">
+    <s:annotation>
+      <s:documentation>A data level notice</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="type">
+        <s:annotation>
+          <s:documentation>Notice type. C = Notice of Correction; D = Notice of Dispute</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="1" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="refnum" nillable="true">
+        <s:annotation>
+          <s:documentation>Reference number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="noticedateraised" type="s:date">
+        <s:annotation>
+          <s:documentation>Date notice raised</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="text">
+        <s:annotation>
+          <s:documentation>Notice text. Only applies to Notice of Correction</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="7800" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="telephone">
+    <s:annotation>
+      <s:documentation>Abstract Validator. 
+  All objects using encapsulated validation inherit from this class, which offers a number of
+ useful validation-related methods
+ </s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="std" type="s:string">
+        <s:annotation>
+          <s:documentation>Std. 
+     The std code
+</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string">
+        <s:annotation>
+          <s:documentation>Number. 
+     The telephone number
+</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="applicantdemographics">
+    <s:annotation>
+      <s:documentation>Input demographic information for an applicant - to be provided with the request details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="person" type="tns:demographicsperson">
+        <s:annotation>
+          <s:documentation>Customer Details for Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="accommodation" type="tns:demographicsaccommodation">
+        <s:annotation>
+          <s:documentation>Accommodation details for Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="contact" type="tns:demographicscontact">
+        <s:annotation>
+          <s:documentation>Customer Contact Details for Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="employment" type="tns:demographicsemployment">
+        <s:annotation>
+          <s:documentation>Applicant's Employment Details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="account" type="tns:demographicsaccount">
+        <s:annotation>
+          <s:documentation>Applicant's Account Details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="expenditure" type="tns:demographicsexpenditure">
+        <s:annotation>
+          <s:documentation>Applicant's Commitments and Expenditures</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="income" type="tns:demographicsincome">
+        <s:annotation>
+          <s:documentation>Income details for Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="demographicsperson">
+    <s:annotation>
+      <s:documentation>Customer Details for Applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="customerstatus" type="tns:demographicscustomerstatus">
+        <s:annotation>
+          <s:documentation>Customer Applicant Status Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="maritalstatus" type="tns:demographicsmaritalstatus">
+        <s:annotation>
+          <s:documentation>Applicant's Marital Status Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="totaldependents" type="s:int">
+        <s:annotation>
+          <s:documentation>Total number of dependent children</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="language" type="tns:demographicslanguage">
+        <s:annotation>
+          <s:documentation>Language Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="identity" type="tns:demographicsidentity">
+        <s:annotation>
+          <s:documentation>Set of types of identity provided by the Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicscustomerstatus">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsmaritalstatus">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicslanguage">
+    <s:restriction base="s:string">
+      <s:enumeration value="CY" />
+      <s:enumeration value="EN" />
+      <s:enumeration value="GA" />
+      <s:enumeration value="GD" />
+      <s:enumeration value="YY" />
+      <s:enumeration value="YZ" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicsidentity">
+    <s:annotation>
+      <s:documentation>Specific Identity details for Applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:demographicsidentitytype">
+        <s:annotation>
+          <s:documentation>Identity Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicsidentitytype">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="12" />
+      <s:enumeration value="13" />
+      <s:enumeration value="14" />
+      <s:enumeration value="15" />
+      <s:enumeration value="16" />
+      <s:enumeration value="17" />
+      <s:enumeration value="18" />
+      <s:enumeration value="19" />
+      <s:enumeration value="20" />
+      <s:enumeration value="21" />
+      <s:enumeration value="22" />
+      <s:enumeration value="23" />
+      <s:enumeration value="24" />
+      <s:enumeration value="25" />
+      <s:enumeration value="26" />
+      <s:enumeration value="27" />
+      <s:enumeration value="28" />
+      <s:enumeration value="29" />
+      <s:enumeration value="30" />
+      <s:enumeration value="31" />
+      <s:enumeration value="32" />
+      <s:enumeration value="33" />
+      <s:enumeration value="34" />
+      <s:enumeration value="35" />
+      <s:enumeration value="36" />
+      <s:enumeration value="37" />
+      <s:enumeration value="38" />
+      <s:enumeration value="39" />
+      <s:enumeration value="40" />
+      <s:enumeration value="41" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicsaccommodation">
+    <s:annotation>
+      <s:documentation>Identity Type Code</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:demographicsaccommodationtype">
+        <s:annotation>
+          <s:documentation>Accommodation Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="propertyvalue" type="s:int">
+        <s:annotation>
+          <s:documentation>Estimate of how much the property is worth</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="mortgagebalance" type="s:int">
+        <s:annotation>
+          <s:documentation>The total amount of the mortgage still to be repaid</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="monthlyrental" type="s:int">
+        <s:annotation>
+          <s:documentation>The price that the applicant pays the home's owner for using the home</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="residentialstatus" type="tns:demographicsresidentialstatus">
+        <s:annotation>
+          <s:documentation>Residential Status Code</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicsaccommodationtype">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsresidentialstatus">
+    <s:restriction base="s:string">
+      <s:enumeration value="00" />
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="12" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicscontact">
+    <s:annotation>
+      <s:documentation>Customer Contact Details for Applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="email" type="tns:demographicsemail">
+        <s:annotation>
+          <s:documentation>Specific Email details for Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="telephone" type="tns:demographicstelephone">
+        <s:annotation>
+          <s:documentation>Specific Telephone details for Applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="demographicsemail">
+    <s:annotation>
+      <s:documentation>Specific Email details for Applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:demographicsemailtype">
+        <s:annotation>
+          <s:documentation>Email Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="address">
+        <s:annotation>
+          <s:documentation>Email address</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="100" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicsemailtype">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicstelephone">
+    <s:annotation>
+      <s:documentation>Specific Telephone details for Applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:demographicstelephonetype">
+        <s:annotation>
+          <s:documentation>Telephone Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="std">
+        <s:annotation>
+          <s:documentation>Telephone STD Code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="number">
+        <s:annotation>
+          <s:documentation>Telephone Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="extension">
+        <s:annotation>
+          <s:documentation>Telephone Extension Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicstelephonetype">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="12" />
+      <s:enumeration value="13" />
+      <s:enumeration value="14" />
+      <s:enumeration value="15" />
+      <s:enumeration value="16" />
+      <s:enumeration value="17" />
+      <s:enumeration value="18" />
+      <s:enumeration value="19" />
+      <s:enumeration value="20" />
+      <s:enumeration value="21" />
+      <s:enumeration value="22" />
+      <s:enumeration value="23" />
+      <s:enumeration value="24" />
+      <s:enumeration value="25" />
+      <s:enumeration value="26" />
+      <s:enumeration value="27" />
+      <s:enumeration value="28" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicsemployment">
+    <s:annotation>
+      <s:documentation>Applicant's Employment Details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="occupation" type="tns:demographicsoccupationtype">
+        <s:annotation>
+          <s:documentation>Occupation Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="employmentstatus" type="tns:demographicsemploymentstatus">
+        <s:annotation>
+          <s:documentation>Employment Status Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="expirydate" type="s:date">
+        <s:annotation>
+          <s:documentation>Employment Expiry Data - dependent on the Employment Status Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="employmentrecency" type="tns:demographicsemploymentrecencytype">
+        <s:annotation>
+          <s:documentation>Employment Recency Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="employercategory" type="tns:demographicsemployercategory">
+        <s:annotation>
+          <s:documentation>Employer Category Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="timeatcurrentemployer" type="s:duration">
+        <s:annotation>
+          <s:documentation>Total number of months with the current employer. 
+     Max Length of 4 removed as wsdl.exe complains that it's an invaid
+ constraining facet for duration types
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicsoccupationtype">
+    <s:restriction base="s:string">
+      <s:enumeration value="00" />
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsemploymentstatus">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsemploymentrecencytype">
+    <s:restriction base="s:string">
+      <s:enumeration value="00" />
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsemployercategory">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="12" />
+      <s:enumeration value="13" />
+      <s:enumeration value="14" />
+      <s:enumeration value="15" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicsaccount">
+    <s:annotation>
+      <s:documentation>Applicant's Account Details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="sortcode">
+        <s:annotation>
+          <s:documentation>Bank sort code of main banking relationship</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="6" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="accountnumber">
+        <s:annotation>
+          <s:documentation>Account number of main banking relationship</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="timeatbank" type="s:duration" />
+      <s:element minOccurs="0" maxOccurs="1" name="paymentmethod" type="tns:demographicspaymentmethod">
+        <s:annotation>
+          <s:documentation>Account's Payment Method Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="financetype" type="tns:demographicsfinancetype">
+        <s:annotation>
+          <s:documentation>Finance/Non Finance Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicspaymentmethod">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsfinancetype">
+    <s:restriction base="s:string">
+      <s:enumeration value="00" />
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="12" />
+      <s:enumeration value="13" />
+      <s:enumeration value="14" />
+      <s:enumeration value="15" />
+      <s:enumeration value="16" />
+      <s:enumeration value="17" />
+      <s:enumeration value="18" />
+      <s:enumeration value="19" />
+      <s:enumeration value="20" />
+      <s:enumeration value="21" />
+      <s:enumeration value="22" />
+      <s:enumeration value="23" />
+      <s:enumeration value="24" />
+      <s:enumeration value="25" />
+      <s:enumeration value="26" />
+      <s:enumeration value="27" />
+      <s:enumeration value="28" />
+      <s:enumeration value="29" />
+      <s:enumeration value="30" />
+      <s:enumeration value="31" />
+      <s:enumeration value="32" />
+      <s:enumeration value="33" />
+      <s:enumeration value="34" />
+      <s:enumeration value="35" />
+      <s:enumeration value="36" />
+      <s:enumeration value="37" />
+      <s:enumeration value="38" />
+      <s:enumeration value="39" />
+      <s:enumeration value="40" />
+      <s:enumeration value="41" />
+      <s:enumeration value="42" />
+      <s:enumeration value="43" />
+      <s:enumeration value="44" />
+      <s:enumeration value="45" />
+      <s:enumeration value="46" />
+      <s:enumeration value="47" />
+      <s:enumeration value="48" />
+      <s:enumeration value="49" />
+      <s:enumeration value="50" />
+      <s:enumeration value="51" />
+      <s:enumeration value="52" />
+      <s:enumeration value="53" />
+      <s:enumeration value="54" />
+      <s:enumeration value="55" />
+      <s:enumeration value="56" />
+      <s:enumeration value="57" />
+      <s:enumeration value="58" />
+      <s:enumeration value="59" />
+      <s:enumeration value="60" />
+      <s:enumeration value="61" />
+      <s:enumeration value="62" />
+      <s:enumeration value="63" />
+      <s:enumeration value="64" />
+      <s:enumeration value="65" />
+      <s:enumeration value="66" />
+      <s:enumeration value="67" />
+      <s:enumeration value="68" />
+      <s:enumeration value="69" />
+      <s:enumeration value="70" />
+      <s:enumeration value="71" />
+      <s:enumeration value="72" />
+      <s:enumeration value="73" />
+      <s:enumeration value="74" />
+      <s:enumeration value="75" />
+      <s:enumeration value="76" />
+      <s:enumeration value="77" />
+      <s:enumeration value="78" />
+      <s:enumeration value="79" />
+      <s:enumeration value="80" />
+      <s:enumeration value="81" />
+      <s:enumeration value="82" />
+      <s:enumeration value="83" />
+      <s:enumeration value="84" />
+      <s:enumeration value="85" />
+      <s:enumeration value="86" />
+      <s:enumeration value="87" />
+      <s:enumeration value="88" />
+      <s:enumeration value="89" />
+      <s:enumeration value="90" />
+      <s:enumeration value="91" />
+      <s:enumeration value="92" />
+      <s:enumeration value="93" />
+      <s:enumeration value="94" />
+      <s:enumeration value="95" />
+      <s:enumeration value="96" />
+      <s:enumeration value="97" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+      <s:enumeration value="100" />
+      <s:enumeration value="101" />
+      <s:enumeration value="102" />
+      <s:enumeration value="103" />
+      <s:enumeration value="104" />
+      <s:enumeration value="105" />
+      <s:enumeration value="106" />
+      <s:enumeration value="107" />
+      <s:enumeration value="108" />
+      <s:enumeration value="109" />
+      <s:enumeration value="110" />
+      <s:enumeration value="111" />
+      <s:enumeration value="112" />
+      <s:enumeration value="113" />
+      <s:enumeration value="114" />
+      <s:enumeration value="115" />
+      <s:enumeration value="116" />
+      <s:enumeration value="117" />
+      <s:enumeration value="118" />
+      <s:enumeration value="119" />
+      <s:enumeration value="120" />
+      <s:enumeration value="121" />
+      <s:enumeration value="122" />
+      <s:enumeration value="123" />
+      <s:enumeration value="124" />
+      <s:enumeration value="125" />
+      <s:enumeration value="126" />
+      <s:enumeration value="127" />
+      <s:enumeration value="128" />
+      <s:enumeration value="998" />
+      <s:enumeration value="999" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="demographicsexpenditure">
+    <s:annotation>
+      <s:documentation>Applicant's Commitments and Expenditures</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="totaldebitcards" type="s:int">
+        <s:annotation>
+          <s:documentation>Total number of cheque of debit cards linked directly to the customer's bank account</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="totalcreditcards" type="s:int">
+        <s:annotation>
+          <s:documentation>Total number of credit or charge cards used to purchase goods and services on credit</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="monthlyunsecuredamount" type="s:int">
+        <s:annotation>
+          <s:documentation>Monthly unsecured financial obligation owed to creditors</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="demographicsincome">
+    <s:annotation>
+      <s:documentation>Income details for Applicant</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="primary" type="tns:demographicsincomedetails">
+        <s:annotation>
+          <s:documentation>Applicant's Main Income details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="additional" type="tns:demographicsincomedetails">
+        <s:annotation>
+          <s:documentation>Set of details for any additional income</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="demographicsincomedetails">
+    <s:annotation>
+      <s:documentation>Income details (either primary or additional incomes)</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:int">
+        <s:annotation>
+          <s:documentation>Amount of income received according to frequency</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:demographicsincometype">
+        <s:annotation>
+          <s:documentation>Income Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="paymentmethod" type="tns:demographicsincomepaymentmethod">
+        <s:annotation>
+          <s:documentation>Income Payment Method Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="frequency" type="tns:demographicsincomefrequency">
+        <s:annotation>
+          <s:documentation>Income Frequency Code</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="demographicsincometype">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsincomepaymentmethod">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:simpleType name="demographicsincomefrequency">
+    <s:restriction base="s:string">
+      <s:enumeration value="01" />
+      <s:enumeration value="02" />
+      <s:enumeration value="03" />
+      <s:enumeration value="04" />
+      <s:enumeration value="05" />
+      <s:enumeration value="06" />
+      <s:enumeration value="07" />
+      <s:enumeration value="08" />
+      <s:enumeration value="09" />
+      <s:enumeration value="10" />
+      <s:enumeration value="11" />
+      <s:enumeration value="12" />
+      <s:enumeration value="98" />
+      <s:enumeration value="99" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="ArrayOfIdentity">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="identity" nillable="true" type="tns:identity" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="identity">
+    <s:annotation>
+      <s:documentation>Identity document information. 
+     Used to submit information on additional identification documents to include within a search
+ </s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="idtype">
+        <s:annotation>
+          <s:documentation>Type of identity document. Type code for the identity document. For example 1 (Solicitors Letter), 5 (Passport), 6 (Driving License). For a complete list please contact Callcredit</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="idparams" type="tns:ArrayOfIdparam">
+        <s:annotation>
+          <s:documentation>Collection of input parameters relating to the identity document. Each idparam is a key value pair which will relate to the specific identity document</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfIdparam">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="idparam" nillable="true" type="tns:idparam" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="idparam">
+    <s:annotation>
+      <s:documentation>Identity document parameter. 
+     This is a key value pair used to specify an attribute of an identity document. Examples include: 'IDNUMBER', '12345';'EXPIRYDATE', '23072005'; 'MAILSORT', '10111'
+ </s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="idkey" nillable="true">
+        <s:annotation>
+          <s:documentation>Keyword identifying what the idnumber relates to. 
+     Valid keywords are IDNUMBER, MACHINEREADABLELINE1, MACHINEREADABLELINE2, MACHINEREADABLELINE3, EXPIRYDATE, VALIDUNTIL, PLACEOFISSUE, DATEOFISSUE and MAILSORT.
+</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="idvalue" nillable="true">
+        <s:annotation>
+          <s:documentation>The value of the identity document attribute. For example, account number, mailsort code, driving license number etc.</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="picklist">
+    <s:annotation>
+      <s:documentation>Picklist</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="searchid" nillable="true">
+        <s:annotation>
+          <s:documentation>The unique GUID assigned to the CallML search</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="searchdate" nillable="true">
+        <s:annotation>
+          <s:documentation>The date the search was carried out</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="applicant" nillable="true" type="tns:picklistapplicant">
+        <s:annotation>
+          <s:documentation>Input and matched name and address details for an applicant</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="maxaddressitems" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Maximum number of address items
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="maxnameitems" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Maximum number of name items
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="picklist" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Picklist 
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="picklistapplicant">
+    <s:annotation>
+      <s:documentation>Applicant details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="address" nillable="true" type="tns:picklistaddress">
+        <s:annotation>
+          <s:documentation>Contains address details. id attribute distinguishes between current and previous addresses (id 1 = current)</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+    <s:attribute name="id" type="s:int" />
+    <s:attribute name="reporttype" type="tns:enReportType" />
+  </s:complexType>
+  <s:complexType name="picklistaddress">
+    <s:annotation>
+      <s:documentation>Address details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="id" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="reporttype" type="tns:enReportType" />
+      <s:element minOccurs="0" maxOccurs="1" name="matchstatus" type="s:int">
+        <s:annotation>
+          <s:documentation>Status of user's selection for a given name and address within the picklist</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="addressinput" nillable="true" type="tns:addressinput">
+        <s:annotation>
+          <s:documentation>Address Details as entered by the user</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="fullmatches" nillable="true" type="tns:fullmatch">
+        <s:annotation>
+          <s:documentation>Contains a set of matches for this specific address</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="enReportType">
+    <s:restriction base="s:string">
+      <s:enumeration value="Picklist" />
+      <s:enumeration value="NoMatchFound" />
+      <s:enumeration value="AddressReport" />
+      <s:enumeration value="SurnameReport" />
+      <s:enumeration value="IndividualReport" />
+      <s:enumeration value="TooManyMatches" />
+      <s:enumeration value="NonDomicileMatch" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="addressinput">
+    <s:annotation>
+      <s:documentation>Address Details as entered by the user</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="abodeno">
+        <s:annotation>
+          <s:documentation>Abode Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingno">
+        <s:annotation>
+          <s:documentation>Building Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="12" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingname">
+        <s:annotation>
+          <s:documentation>Building Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street1">
+        <s:annotation>
+          <s:documentation>Street 1</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street2">
+        <s:annotation>
+          <s:documentation>Street 2</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="sublocality">
+        <s:annotation>
+          <s:documentation>Sub Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="locality">
+        <s:annotation>
+          <s:documentation>Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="posttown">
+        <s:annotation>
+          <s:documentation>Post Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="25" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="premiseno">
+        <s:annotation>
+          <s:documentation>Premise Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="premisename">
+        <s:annotation>
+          <s:documentation>Premise Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Post Code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="fullmatch">
+    <s:annotation>
+      <s:documentation>Contains address details as found on the database as well as a series of name matching info</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="picklistnames" type="tns:ArrayOfPicklistname">
+        <s:annotation>
+          <s:documentation>Input name details and a set of name matches</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="selected" type="s:boolean">
+        <s:annotation>
+          <s:documentation>True indicates that this address match is selected, False indicates a non selection. Only one item should be selected in when details are submitted in order to resolve a picklist</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="addressmatch" nillable="true" type="tns:addressmatch">
+        <s:annotation>
+          <s:documentation>Matched address details as recorded on the database</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfPicklistname">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="picklistname" nillable="true" type="tns:picklistname" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="picklistname">
+    <s:annotation>
+      <s:documentation>Pick List Name details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="reporttype" type="tns:enReportType">
+        <s:annotation>
+          <s:documentation>
+  Report Type Enumeration
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="matchstatus" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Match status level
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="nameinput" nillable="true" type="tns:nameinput">
+        <s:annotation>
+          <s:documentation>Name details as entered by the user</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="namematches" nillable="true" type="tns:namematch">
+        <s:annotation>
+          <s:documentation>A collection of possible Name Matches</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+    <s:attribute name="id" type="s:int" />
+  </s:complexType>
+  <s:complexType name="nameinput">
+    <s:annotation>
+      <s:documentation>Name Input Information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Applicant title etc</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>Forename</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:annotation>
+          <s:documentation>Other names</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="suffix">
+        <s:annotation>
+          <s:documentation>Suffix</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="namematch">
+    <s:annotation>
+      <s:documentation>Name match</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="selected" type="s:boolean">
+        <s:annotation>
+          <s:documentation>
+ Name match selected boolean indicator
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forenamematch" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Name match forename match level
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surnamematch" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Name match surname match level
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="middleinitialmatch" type="s:int">
+        <s:annotation>
+          <s:documentation>
+ Name match middlename match level
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="residenceid" type="s:int">
+        <s:annotation>
+          <s:documentation>Residence ID</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Title</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>Forename</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:annotation>
+          <s:documentation>Other Names</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="surname" nillable="true">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="suffix">
+        <s:annotation>
+          <s:documentation>Suffix</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="sex" type="s:int">
+        <s:annotation>
+          <s:documentation>Sex. 0 for neutral, 1 for male, 2 for female</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dateofbirth" type="s:date">
+        <s:annotation>
+          <s:documentation>Date of Birth</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="addressmatch">
+    <s:annotation>
+      <s:documentation>Matched address details as recorded on the database</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="domicileid" type="s:int">
+        <s:annotation>
+          <s:documentation>Domicile ID</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="ndi" type="s:string">
+        <s:annotation>
+          <s:documentation>Non-Domiciled Address indicator</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="abodeno">
+        <s:annotation>
+          <s:documentation>Abode Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingno">
+        <s:annotation>
+          <s:documentation>Building Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="12" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingname">
+        <s:annotation>
+          <s:documentation>Building Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street1">
+        <s:annotation>
+          <s:documentation>Street 1</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street2">
+        <s:annotation>
+          <s:documentation>Street 2</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="sublocality">
+        <s:annotation>
+          <s:documentation>Sub Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="locality">
+        <s:annotation>
+          <s:documentation>Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="posttown">
+        <s:annotation>
+          <s:documentation>Post Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="25" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Post Code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="overridedecision">
+    <s:annotation>
+      <s:documentation>The details required to perform an Override Decision</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="originalsearchid" nillable="true">
+        <s:annotation>
+          <s:documentation>The original search GUID</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="newdecision" nillable="true">
+        <s:annotation>
+          <s:documentation>The new decision</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="subsequentsearch">
+    <s:annotation>
+      <s:documentation>The details required to perform a Subsequent Search</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="originalsearchid" nillable="true">
+        <s:annotation>
+          <s:documentation>The original search GUID</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfIdentity">
+        <s:annotation>
+          <s:documentation>Collection of Identities</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="addresslinksearch">
+    <s:annotation>
+      <s:documentation>The details required to perform an Address Link search</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="originalsearchid" nillable="true">
+        <s:annotation>
+          <s:documentation>The original search GUID</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="navlinksearchid" nillable="true">
+        <s:annotation>
+          <s:documentation>The navlink GUID</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="CallMLResults6">
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="searchdate" nillable="true" type="s:string" />
+      <s:element minOccurs="1" maxOccurs="1" name="searchid" nillable="true">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="cast">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="numprimarychecks" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="numcorroborativechecks" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="numprimaryshareidsconfirmed" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="numcorroborativeshareidsconfirmed" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="numprimaryotheridsconfirmed" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="numcorroborativeotheridsconfirmed" type="s:int" />
+      <s:element minOccurs="1" maxOccurs="1" name="confirmatorydobs" type="s:int" />
+      <s:element minOccurs="1" maxOccurs="1" name="totaldobs" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="sanctionswarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="sdnwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="pepwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="addresswarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="addresslinkswarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="goneawaywarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="dvlawarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="deceasedwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="passportwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="fraudulentpassportwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="searchwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="idcardwarning" type="s:boolean" />
+      <s:element minOccurs="1" maxOccurs="1" name="matchlevel" type="tns:enReportType" />
+      <s:element minOccurs="0" maxOccurs="1" name="appverified">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="22" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="nocs" type="tns:ArrayOfNoc" />
+      <s:element minOccurs="0" maxOccurs="1" name="bairecords" type="tns:ArrayOfBairecord" />
+      <s:element minOccurs="0" maxOccurs="1" name="judgments" type="tns:judgments" />
+      <s:element minOccurs="0" maxOccurs="1" name="errecords" type="tns:ArrayOfErrecord" />
+      <s:element minOccurs="0" maxOccurs="1" name="pafs" type="tns:ArrayOfPaf" />
+      <s:element minOccurs="0" maxOccurs="1" name="ukinvestorrecords" type="tns:ArrayOfUkinvestorrecord" />
+      <s:element minOccurs="0" maxOccurs="1" name="sharerecords" type="tns:ArrayOfSharerecord" />
+      <s:element minOccurs="0" maxOccurs="1" name="furtherdetails" type="tns:furtherdetails" />
+      <s:element minOccurs="0" maxOccurs="1" name="otherdata" type="tns:otherdata" />
+      <s:element minOccurs="0" maxOccurs="1" name="searches" type="tns:ArrayOfSearchhistoryitem" />
+      <s:element minOccurs="0" maxOccurs="1" name="numactivecifasrecords" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="cifasrecords" type="tns:ArrayOfCifasrecord" />
+      <s:element minOccurs="0" maxOccurs="1" name="geofraud" type="tns:geofraud" />
+      <s:element minOccurs="0" maxOccurs="1" name="geofraudwarning" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="halo" type="tns:halo" />
+      <s:element minOccurs="0" maxOccurs="1" name="eddeceased" type="tns:eddeceased" />
+      <s:element minOccurs="0" maxOccurs="1" name="grodeceased" type="tns:grodeceased" />
+      <s:element minOccurs="0" maxOccurs="1" name="addresslinks" type="tns:ArrayOfAddresslink" />
+      <s:element minOccurs="0" maxOccurs="1" name="additionalxml">
+        <s:complexType mixed="true">
+          <s:sequence>
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="matchedindividual" type="tns:MatchedIndividual" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfNoc">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="noc" nillable="true" type="tns:noc" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="noc">
+    <s:annotation>
+      <s:documentation>File level Notice of Correction</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="refnum" nillable="true">
+        <s:annotation>
+          <s:documentation>Reference number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="datenoticeraised" type="s:date">
+        <s:annotation>
+          <s:documentation>Date notice raised</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="text">
+        <s:annotation>
+          <s:documentation>Notice text</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="7800" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="name" type="tns:name">
+        <s:annotation>
+          <s:documentation>Name details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="address" type="tns:address">
+        <s:annotation>
+          <s:documentation>Address details</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfBairecord">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="bairecord" nillable="true" type="tns:bairecord" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="bairecord">
+    <s:annotation>
+      <s:documentation>A Bankruptcy and Insolvency record</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="courtname" nillable="true">
+        <s:annotation>
+          <s:documentation>Court name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="ordertype" nillable="true">
+        <s:annotation>
+          <s:documentation>Type of Insolvency</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Title</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>First name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:annotation>
+          <s:documentation>Other names</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="suffix">
+        <s:annotation>
+          <s:documentation>Suffix</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="address">
+        <s:annotation>
+          <s:documentation>The address information that this BAI record is recorded against</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="180" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="restrictiontype">
+        <s:annotation>
+          <s:documentation>Bankruptcy restriction type</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="3" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="restrictionenddate" type="s:dateTime">
+        <s:annotation>
+          <s:documentation>Bankruptcy restriction end date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="bairestrictionenddate" type="s:date">
+        <s:annotation>
+          <s:documentation>Bankruptcy restriction end date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice">
+        <s:annotation>
+          <s:documentation>Notice details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="usedindecision" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if this record is used in the final decision</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="judgments">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="judgment" nillable="true" type="tns:judgment" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="judgment">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="surname" nillable="true">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="suffix">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="address" nillable="true">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="452" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="courtname" nillable="true">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="casenumber" nillable="true">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean" />
+      <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice" />
+      <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+      <s:element minOccurs="0" maxOccurs="1" name="judgmentamount" type="s:int" />
+      <s:element minOccurs="0" maxOccurs="1" name="judgmentdate" type="s:date" />
+      <s:element minOccurs="0" maxOccurs="1" name="datesatisfied" type="s:date" />
+      <s:element minOccurs="1" maxOccurs="1" name="judgmenttype" nillable="true">
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="21" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="usedindecision" type="s:boolean" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfErrecord">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="errecord" nillable="true" type="tns:errecord" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="errecord">
+    <s:annotation>
+      <s:documentation>An Electoral Roll record</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="address" type="tns:address">
+        <s:annotation>
+          <s:documentation />
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates the address that has matched is a current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="residents" type="tns:ArrayOfResident">
+        <s:annotation>
+          <s:documentation>A collection of Resident matches </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="usedindecision" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if this record is used in the final decision</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="lorwarning" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Length of Residency warning</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfResident">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="resident" nillable="true" type="tns:resident" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="resident">
+    <s:annotation>
+      <s:documentation>A Resident match</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="residenceid" nillable="true">
+        <s:annotation>
+          <s:documentation>The ID of the residence</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="9" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="name" type="tns:name">
+        <s:annotation>
+          <s:documentation>Contains name information</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="duration" type="tns:preciseduration">
+        <s:annotation>
+          <s:documentation>Duration. 
+     Number of days, months or years
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="startdateresident" type="s:date">
+        <s:annotation>
+          <s:documentation>Residency start date </s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="enddateresident" type="s:date">
+        <s:annotation>
+          <s:documentation>Residency end date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="ervalid" type="s:int">
+        <s:annotation>
+          <s:documentation>Indicates the level of match that was achieved. 1 = Individual found on current electoral roll; 2 = individual not found on electoral roll; 3 = individual found on previous electoral roll; 4 = individual found on rolling electoral roll; 5 = individual found on previous rolling electoral roll</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="erhistory" type="tns:ArrayOfErhistoryitem">
+        <s:annotation>
+          <s:documentation>Previous Electoral Roll items</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice">
+        <s:annotation>
+          <s:documentation>Notices of correction and/or dispute</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+    <s:attribute name="matchtype" type="tns:enAppMatch" use="required" />
+    <s:attribute name="currentname" type="s:int" use="required" />
+    <s:attribute name="declaredalias" type="s:int" use="required" />
+    <s:attribute name="individualtype" type="s:string" />
+    <s:attribute name="samefamilytype" type="s:string" />
+    <s:attribute name="associatetype" type="s:string" />
+  </s:complexType>
+  <s:complexType name="preciseduration">
+    <s:annotation>
+      <s:documentation>Precise duration (days, months, years)</s:documentation>
+    </s:annotation>
+    <s:complexContent mixed="false">
+      <s:extension base="tns:duration">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="days" type="s:int" />
+        </s:sequence>
+      </s:extension>
+    </s:complexContent>
+  </s:complexType>
+  <s:complexType name="duration">
+    <s:annotation>
+      <s:documentation>Duration (months and years)</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="years" type="s:int">
+        <s:annotation>
+          <s:documentation>Years defined for duration</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="months" type="s:int">
+        <s:annotation>
+          <s:documentation>Months defined for duration</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfErhistoryitem">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="erhistoryitem" nillable="true" type="tns:erhistoryitem" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="erhistoryitem">
+    <s:annotation>
+      <s:documentation>ER History Item</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="optout" type="s:int">
+        <s:annotation>
+          <s:documentation>Electoral roll opt-out indicator. 0 = opt-in, 1 = opt-out</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="erhistorystartdate" type="s:date">
+        <s:annotation>
+          <s:documentation>History start date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="erhistoryenddate" type="s:date">
+        <s:annotation>
+          <s:documentation>History end date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="rollingroll" type="s:int">
+        <s:annotation>
+          <s:documentation>0 = annual ER, 1 = monthly rolling ER</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice">
+        <s:annotation>
+          <s:documentation>Notices of correction and/or dispute</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:simpleType name="enAppMatch">
+    <s:restriction base="s:string">
+      <s:enumeration value="HM" />
+      <s:enumeration value="IM" />
+      <s:enumeration value="SM" />
+      <s:enumeration value="CM" />
+      <s:enumeration value="NM" />
+    </s:restriction>
+  </s:simpleType>
+  <s:complexType name="ArrayOfPaf">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="paf" nillable="true" type="tns:paf" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="paf">
+    <s:annotation>
+      <s:documentation>PAF match</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="address" nillable="true">
+        <s:annotation>
+          <s:documentation>Address</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="320" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="pafvalid" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Flag indicating whether PAF address is valid</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Flag indicating whether this is the current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="usedindecision" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Flag indicating whether used in decision</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfUkinvestorrecord">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="ukinvestorrecord" nillable="true" type="tns:ukinvestorrecord" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ukinvestorrecord">
+    <s:annotation>
+      <s:documentation>Contains FTSE details for an individual</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="result">
+        <s:annotation>
+          <s:documentation>The match level achieved</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Title</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>Forename</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="abode">
+        <s:annotation>
+          <s:documentation>Abode name or number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="housename">
+        <s:annotation>
+          <s:documentation>House name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="housenum">
+        <s:annotation>
+          <s:documentation>House number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street1">
+        <s:annotation>
+          <s:documentation>Street 1</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street2">
+        <s:annotation>
+          <s:documentation>Street 2</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="sublocality">
+        <s:annotation>
+          <s:documentation>Sub Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="locality">
+        <s:annotation>
+          <s:documentation>Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="town">
+        <s:annotation>
+          <s:documentation>Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="25" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Postcode</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="companies">
+        <s:annotation>
+          <s:documentation>CSV list of company names in which shares are held</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2000" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates whether or not the address given is the applicants' current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="usedindecision" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if this record is used in the final decision</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfSharerecord">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="sharerecord" nillable="true" type="tns:sharerecord" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="sharerecord">
+    <s:annotation>
+      <s:documentation>Contains all details relating to a single SHARE account</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="supplierdetails" nillable="true" type="tns:supplierdetails">
+        <s:annotation>
+          <s:documentation>Supplier Details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="shareholderdetails" nillable="true" type="tns:shareholderdetails">
+        <s:annotation>
+          <s:documentation>Details related to the specific account holder for whom this report has been generated. Note that account history (described later) is specific to this account holder and not the 
+ account in full - i.e. for those account holders who joined the account more recently than the primary 
+ account holder, only the history from the point they joined the account will be supplied</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="sharedetails" nillable="true" type="tns:sharedetails">
+        <s:annotation>
+          <s:documentation>Details specific to the account itself</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates whether or not the address relates to the applicant's current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice">
+        <s:annotation>
+          <s:documentation>Notice details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="usedindecision" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates whether or not the record was used in the decision</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="supplierdetails">
+    <s:annotation>
+      <s:documentation>Contains details specific to the Account Supplier</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="memberportid">
+        <s:annotation>
+          <s:documentation>The members Portfolio Id Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="3" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="shareholderdetails">
+    <s:annotation>
+      <s:documentation>Account Holder Details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Account holder's title</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>Account holder's forename</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename2">
+        <s:annotation>
+          <s:documentation>Account holder's middle name (or second forename)</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Account holder's surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="suffix">
+        <s:annotation>
+          <s:documentation>Account holder's suffix</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="address" nillable="true">
+        <s:annotation>
+          <s:documentation>Account holder's full address as known by the lender</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="400" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Account holder's postal code as known by the lender</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dateofbirth" type="s:date">
+        <s:annotation>
+          <s:documentation>Date of Birth</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="statuscode" nillable="true">
+        <s:annotation>
+          <s:documentation>Alphanumeric Account Holder Status Code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="lorwarning" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Length of Residency warning. If the data returned is less than a year old from the date of application, the warning will be set to true, otherwise it will be false</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="dobmatch" type="s:int">
+        <s:annotation>
+          <s:documentation>The Date Of Birth match code . Return values are: 1 = No DOB entered or no DOB attached to the data, 2 = Input DOB matches returned Share DOB, 3 = Input DOB doesnt match returned Share DOB, 4 = The SHARE record is not valid for Money Laundering purposes</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="sharedetails">
+    <s:annotation>
+      <s:documentation>Account details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="acctypecode" type="s:string">
+        <s:annotation>
+          <s:documentation>The Account Type Code</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="acctypegroup">
+        <s:annotation>
+          <s:documentation>The Account Type Group Description</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="accountstartdate" type="s:date">
+        <s:annotation>
+          <s:documentation>The Account Start Date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="settledaccount" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicate if the Share record has been settled in the last 12 months</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="furtherdetails">
+    <s:annotation>
+      <s:documentation>Contains details of further corroborative information to support the application</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="levelofconfidenceer" type="tns:levelofconfidenceer">
+        <s:annotation>
+          <s:documentation>Represents the level of confidence in the ER data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="levelofconfidenceshare" type="tns:levelofconfidenceshare">
+        <s:annotation>
+          <s:documentation>Represents the level of confidence in the SHARE data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="levelofconfidencedob" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the Date of Birth data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="levelofconfidenceccj" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the CCJ data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="levelofconfidencebai" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the BAI data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="levelofconfidenceftse" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the FTSE data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="drivinglicence" type="tns:drivinglicence">
+        <s:annotation>
+          <s:documentation>Contains Driving Licence information</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="passport" type="tns:passport">
+        <s:annotation>
+          <s:documentation>Contains Passport information</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="idcard" type="tns:idcard">
+        <s:annotation>
+          <s:documentation>
+ XML block containing confirmatory details for a National Identity Card when entered as an identity document.
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="levelofconfidenceer">
+    <s:annotation>
+      <s:documentation>Represents the level of confidence in the ER data</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddresslevel" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the ER data for the current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="previousaddresslevel" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the ER data for the previous address</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="levelofconfidenceshare">
+    <s:annotation>
+      <s:documentation>Represents the level of confidence in the SHARE data</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddresslevel" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the SHARE data for the current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="previousaddresslevel" type="s:int">
+        <s:annotation>
+          <s:documentation>A numeric value representing the level of confidence in the SHARE data for the previous address</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="drivinglicence">
+    <s:annotation>
+      <s:documentation>Contains driving licence information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="idnumber" nillable="true" type="s:string">
+        <s:annotation>
+          <s:documentation>The driving licence number</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="surnamematch" nillable="true" type="s:string">
+        <s:annotation>
+          <s:documentation>Indicates if the supplied surname matches the name in the driving licence number. Return value will be true, false or not supplied</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="initialmatch" nillable="true">
+        <s:annotation>
+          <s:documentation>Indicates if the supplied initials match the initials in the driving licence number. Return value will be true, false or not supplied</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernamematch" type="s:string">
+        <s:annotation>
+          <s:documentation>Indicates if a supplied middle initial matches the driving licence number. Return value will be true, false or not supplied</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobdaymatch">
+        <s:annotation>
+          <s:documentation>Indicates if the day supplied in the input Date of Birth matches the day in the Date of Birth in the Driving Licence number. Return value will be true, false or not supplied</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobmonthmatch">
+        <s:annotation>
+          <s:documentation>Indicates if the month supplied in the input Date of Birth matches the month in the Date of Birth in the Driving Licence number. Return value will be true, false or not supplied</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobyearmatch">
+        <s:annotation>
+          <s:documentation>Indicates if the year supplied in the input Date of Birth matches the year in the Date of Birth in the Driving Licence number. Return value will be true, false or not supplied</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="passport">
+    <s:annotation>
+      <s:documentation>Contains passport information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="idnumber">
+        <s:annotation>
+          <s:documentation>The passport number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="machinereadableline1">
+        <s:annotation>
+          <s:documentation>The first machine-readable line</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="machinereadableline2">
+        <s:annotation>
+          <s:documentation>The second machine-readable line</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="surnamematch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the surname supplied in the input parameters matches the surname supplied in the passport details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="forenamematch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the forename supplied in the input parameters matches the forename supplied in the passport details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="middlenamematch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the middlename supplied in the input parameters matches the middlename supplied in the passport details</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="issuingcountry">
+        <s:annotation>
+          <s:documentation>The country that issued the passport</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="91" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="nationality">
+        <s:annotation>
+          <s:documentation>The nationality of the passport holder</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="91" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="checkDigit1Match" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the first passport check digit is verified</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="checkDigit2Match" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the second passport check digit is verified</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="checkDigit3Match" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the third passport check digit is verified</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="checkDigit4Match" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the fourth passport check digit is verified</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="checkDigit5Match" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if the fifth passport check digit is verified</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobdaymatch">
+        <s:annotation>
+          <s:documentation>Indicates if the day supplied in the input Date of Birth matches the day in the Date of Birth in the passport number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobmonthmatch">
+        <s:annotation>
+          <s:documentation>Indicates if the month supplied in the input Date of Birth matches the month in the Date of Birth in the passport number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobyearmatch">
+        <s:annotation>
+          <s:documentation>Indicates if the year supplied in the input Date of Birth matches the year in the Date of Birth in the passport number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="expirydateok">
+        <s:annotation>
+          <s:documentation>Indicates if the supplied expiry date matches the expiry date given in the passport number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="idcard">
+    <s:annotation>
+      <s:documentation>Contains National Identity Card information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="idnumber">
+        <s:annotation>
+          <s:documentation>The National Identity Card number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="machinereadableline1">
+        <s:annotation>
+          <s:documentation>The first line of the machine readable identity card</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="machinereadableline2">
+        <s:annotation>
+          <s:documentation>The second line of the machine readable identity card</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="machinereadableline3">
+        <s:annotation>
+          <s:documentation>The third line of the machine readable identity card</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="surnamematch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>True if the surname entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="forenamematch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>True if the forename entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="middlenamematch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>True if the middle name entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="nationality">
+        <s:annotation>
+          <s:documentation>
+ The nationality of the identity card holder.
+ </s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="3" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dateofissue">
+        <s:annotation>
+          <s:documentation>
+ The National Identity Card date of issue
+ </s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobdaymatch">
+        <s:annotation>
+          <s:documentation>True if the date of birth day entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobmonthmatch">
+        <s:annotation>
+          <s:documentation>True if the date of birth month entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dobyearmatch">
+        <s:annotation>
+          <s:documentation>True if the date of birth year entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="validuntilok">
+        <s:annotation>
+          <s:documentation>True if the valid until date entered matches to the Identity Details entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="otherdata">
+    <s:annotation>
+      <s:documentation>Contains other sources of corroborative information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="mailsort" type="tns:mailsort">
+        <s:annotation>
+          <s:documentation>Contains Mailsort data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="director" type="tns:director">
+        <s:annotation>
+          <s:documentation>Contains Directors At Home data</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="location" type="tns:location">
+        <s:annotation>
+          <s:documentation>Contains information relating to the country, region, city or Postal Area associated with a submitted IP address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="nonstandardaddress" type="tns:nonstandardaddress">
+        <s:annotation>
+          <s:documentation>Contains information about Non-standard addresses if the input address matches to the Non Standard Addresses database</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="telephoneresults" type="tns:ArrayOfTelephoneresult">
+        <s:annotation>
+          <s:documentation>Contains information about any telephone search results</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="mailsort">
+    <s:annotation>
+      <s:documentation>Contains information relating to Mailsort data</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Postcode</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="mailsortcode">
+        <s:annotation>
+          <s:documentation>The Mailsort code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="5" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="mailvalid">
+        <s:annotation>
+          <s:documentation>Indicates if the given mailsort code is valid. Possible return values are yes, no or not supplied</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="12" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="director">
+    <s:annotation>
+      <s:documentation>Contains information relating to the Directors At Home database</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddress" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates if these details relate to the current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>Forename</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:annotation>
+          <s:documentation>Other Names</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="abodeno">
+        <s:annotation>
+          <s:documentation>Abode Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingno">
+        <s:annotation>
+          <s:documentation>Building Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="12" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingname">
+        <s:annotation>
+          <s:documentation>Building Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street1">
+        <s:annotation>
+          <s:documentation>Street 1</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street2">
+        <s:annotation>
+          <s:documentation>Street 2</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="locality">
+        <s:annotation>
+          <s:documentation>Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="sublocality">
+        <s:annotation>
+          <s:documentation>Sublocality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="posttown">
+        <s:annotation>
+          <s:documentation>Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="25" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Postcode</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="companydetails">
+        <s:annotation>
+          <s:documentation>Company Details. Contains a comma separated list of Company names, with the company registered number in brackets e.g. Company 1 [123456789], Company 2 [98764321]</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2000" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="location">
+    <s:annotation>
+      <s:documentation>Contains information relating to the country, region, city or Postal Area associated with a submitted IP address</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="ipaddress">
+        <s:annotation>
+          <s:documentation>The IP address that the data relates to</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="15" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="routingtype">
+        <s:annotation>
+          <s:documentation>The routing type associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="aolflag">
+        <s:annotation>
+          <s:documentation>The aol flag associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="continent">
+        <s:annotation>
+          <s:documentation>The continent associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="country">
+        <s:annotation>
+          <s:documentation>The country associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="state">
+        <s:annotation>
+          <s:documentation>The state associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="city">
+        <s:annotation>
+          <s:documentation>The city associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcodearea">
+        <s:annotation>
+          <s:documentation>The postcode area associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="secondleveldomain">
+        <s:annotation>
+          <s:documentation>The second level domain associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="thirdleveldomain">
+        <s:annotation>
+          <s:documentation>The third level domain associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="connectiontype">
+        <s:annotation>
+          <s:documentation>The connection type associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="linespeed">
+        <s:annotation>
+          <s:documentation>The linespeed associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="carrier">
+        <s:annotation>
+          <s:documentation>The carrier associated with the ipaddress entered</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="nonstandardaddress">
+    <s:annotation>
+      <s:documentation>Contains information about Non-standard addresses if the input address matches to the Non Standard Addresses database</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="address">
+        <s:annotation>
+          <s:documentation>The input address</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="400" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="addresstype">
+        <s:annotation>
+          <s:documentation>The type of non-standard address found, e.g. Prison, Mailbox etc</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="250" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfTelephoneresult">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="telephoneresult" nillable="true" type="tns:telephoneresult" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="telephoneresult">
+    <s:annotation>
+      <s:documentation>XML block containing the results of searching the telephone data</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="source" type="s:string">
+        <s:annotation>
+          <s:documentation>The telephone data source matched to. Values are 1 = BT OSIS, 2 = QIRE</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="matchlevel" type="s:string">
+        <s:annotation>
+          <s:documentation>The match level.  0 = No Match, 1 = Match, 2 = Match but Telephone number retrieved differs</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string">
+        <s:annotation>
+          <s:documentation>The telephone number retrieved</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfSearchhistoryitem">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="searchhistoryitem" nillable="true" type="tns:searchhistoryitem" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="searchhistoryitem">
+    <s:annotation>
+      <s:documentation>Contains details of a specific search on an individual</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="searchref" nillable="true">
+        <s:annotation>
+          <s:documentation>The Search Reference Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="searchorgtype" nillable="true">
+        <s:annotation>
+          <s:documentation>Search organisation type</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="searchorgname">
+        <s:annotation>
+          <s:documentation>Search organisation name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="searchunitname">
+        <s:annotation>
+          <s:documentation>Search Unit Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="username">
+        <s:annotation>
+          <s:documentation>User Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="searchpurpose" nillable="true">
+        <s:annotation>
+          <s:documentation>The Search Purpose</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="searchdate">
+        <s:annotation>
+          <s:documentation>The date the search was carried out</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="searchhistorydate" type="s:date">
+        <s:annotation>
+          <s:documentation>The date the search was carried out</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dateofbirth" type="s:date">
+        <s:annotation>
+          <s:documentation>The input Date of Birth</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="addressmatch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates whether the address matches the current address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="ownsearch" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Indicates that this was the users' own organisation</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Title</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="forename">
+        <s:annotation>
+          <s:documentation>Forename</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othernames">
+        <s:annotation>
+          <s:documentation>Middle names/initials</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="abodeno">
+        <s:annotation>
+          <s:documentation>Abode Name or Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingno">
+        <s:annotation>
+          <s:documentation>Building Number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="12" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="buildingname">
+        <s:annotation>
+          <s:documentation>Building Name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street1">
+        <s:annotation>
+          <s:documentation>Street 1</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street2">
+        <s:annotation>
+          <s:documentation>Street 2</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="sublocality">
+        <s:annotation>
+          <s:documentation>Sublocality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="locality">
+        <s:annotation>
+          <s:documentation>District/Locality</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="35" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="posttown">
+        <s:annotation>
+          <s:documentation>Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="25" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Postcode</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfCifasrecord">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="cifasrecord" nillable="true" type="tns:cifasrecord" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="cifasrecord">
+    <s:annotation>
+      <s:documentation>Individual CIFAS filing details</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="title">
+        <s:annotation>
+          <s:documentation>Title</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="firstname">
+        <s:annotation>
+          <s:documentation>First name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othername1">
+        <s:annotation>
+          <s:documentation>First other name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="othername2">
+        <s:annotation>
+          <s:documentation>Second other name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="surname">
+        <s:annotation>
+          <s:documentation>Surname</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="birthdate" type="s:dateTime">
+        <s:annotation>
+          <s:documentation>Date of Birth</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="flat">
+        <s:annotation>
+          <s:documentation>Flat or abode number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="housename">
+        <s:annotation>
+          <s:documentation>House or building name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="housenumber">
+        <s:annotation>
+          <s:documentation>House or building number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="10" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="street">
+        <s:annotation>
+          <s:documentation>Street</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="30" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="district">
+        <s:annotation>
+          <s:documentation>District</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="36" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="county">
+        <s:annotation>
+          <s:documentation>County</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="town">
+        <s:annotation>
+          <s:documentation>Town</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="20" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="postcode">
+        <s:annotation>
+          <s:documentation>Postcode</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="8" />
+            <s:minLength value="6" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="casereferenceno" nillable="true">
+        <s:annotation>
+          <s:documentation>Case reference number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="6" />
+            <s:minLength value="6" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="membernumber" nillable="true">
+        <s:annotation>
+          <s:documentation>Member number</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="3" />
+            <s:minLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="membername">
+        <s:annotation>
+          <s:documentation>Member name</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="100" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="productcode" nillable="true">
+        <s:annotation>
+          <s:documentation>Product code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="4" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="fraudcategory" nillable="true">
+        <s:annotation>
+          <s:documentation>Fraud category</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="productdesc">
+        <s:annotation>
+          <s:documentation>Description of product code</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="150" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="frauddesc">
+        <s:annotation>
+          <s:documentation>Description of fraud category</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="50" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="inputdate" type="s:dateTime">
+        <s:annotation>
+          <s:documentation>CIFAS filing input date</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="expirydate" type="s:dateTime">
+        <s:annotation>
+          <s:documentation>Expiry date of CIFAS filing</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="geofraud">
+    <s:annotation>
+      <s:documentation>Contains GeoFraud information. 
+ GeoFraud is a fraud score built using proven fraud cases and in-depth postcode level indicators built up from a combination of datasets including credit data, known fraud outcome data, negative credit data, electoral roll, house prices, unemployment data and geo-demographic data  
+ </s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="currentaddresspercentile" type="s:int">
+        <s:annotation>
+          <s:documentation>The GeoFraud index for the postcode relating to the current address. Identifies the potential risk of fraud in the input postcode</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="previousaddresspercentile" type="s:int">
+        <s:annotation>
+          <s:documentation>The GeoFraud index for the postcode relating to the previous address. Identifies the potential risk of fraud in the input postcode</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="currentaddress">
+        <s:annotation>
+          <s:documentation>Contains the current address details</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="386" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="previousaddress">
+        <s:annotation>
+          <s:documentation>Contains the previous address details</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="386" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="1" maxOccurs="1" name="gfwarning" type="s:int">
+        <s:annotation>
+          <s:documentation>Warning flag based on the difference between current and previous address GeoFraud indexes. 
+ The gfwarning flag has the following possible values:
+ 1 - Substantial Index change between Previous and Current Address
+ 2 - Impersonation Warning - Medium Risk
+ 3 - Impersonation Warning - High Risk
+</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="halo">
+    <s:annotation>
+      <s:documentation>Contains all Halo deceased information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="matchtoregister" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Flag to indicate whether or not the applicant matches to a name on the Halo register</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="confidencelevel">
+        <s:annotation>
+          <s:documentation>A confidence flag which indicates on a scale of 1 to 10 (10 being the highest) the reliability of the information</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="2" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="matchlevel">
+        <s:annotation>
+          <s:documentation>The match level. 
+     The match level achieved. I = Individual match, H = Household match, M = Multiple match 
+ </s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="16" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dateofdeath" type="tns:DateOfDeathDate" />
+      <s:element minOccurs="0" maxOccurs="1" name="dateofbirth" type="s:date">
+        <s:annotation>
+          <s:documentation>The date of birth. 
+     The date of birth as held on the Halo data.
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="DateOfDeathDate">
+    <s:annotation>
+      <s:documentation>Date of Death Date. 
+     Valid formats are YYYY, YYYY-MM or YYYY-MM-DD.
+     The "approx" valid values are false or true. false = Date of Death. true = Approximate Date of Death.
+ </s:documentation>
+    </s:annotation>
+    <s:simpleContent>
+      <s:extension base="s:string">
+        <s:attribute name="approx" type="s:boolean" use="required" />
+      </s:extension>
+    </s:simpleContent>
+  </s:complexType>
+  <s:complexType name="eddeceased">
+    <s:annotation>
+      <s:documentation>Contains all REaD group deceased information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="matchtoregister" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Flag to indicate whether or not the applicant matches to a name on the REaD Group deceased register</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="matchlevel">
+        <s:annotation>
+          <s:documentation>The match level. 
+     The match level achieved. I = Individual match, H = Household match, M = Multiple match
+ </s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="grodeceased">
+    <s:annotation>
+      <s:documentation>Deceased Data</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="1" maxOccurs="1" name="matchtoregister" type="s:boolean">
+        <s:annotation>
+          <s:documentation>Flag to indicate whether or not the applicant matches to a name on the GRO deceased register</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="matchlevel">
+        <s:annotation>
+          <s:documentation>The match level. 
+     The match level achieved. I = Individual match, H = Household match, M = Multiple match
+ </s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="1" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="dateofdeath" type="tns:DateOfDeathDate" />
+      <s:element minOccurs="0" maxOccurs="1" name="dateofbirth" type="s:date">
+        <s:annotation>
+          <s:documentation>
+     The date of birth as held on the GRO data.
+ </s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="ArrayOfAddresslink">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="unbounded" name="addresslink" nillable="true" type="tns:addresslink" />
+    </s:sequence>
+  </s:complexType>
+  <s:complexType name="addresslink">
+    <s:annotation>
+      <s:documentation>Address link information</s:documentation>
+    </s:annotation>
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="navlinkid">
+        <s:annotation>
+          <s:documentation>The navlink ID</s:documentation>
+        </s:annotation>
+        <s:simpleType>
+          <s:restriction base="s:string">
+            <s:maxLength value="38" />
+          </s:restriction>
+        </s:simpleType>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="address" type="tns:addresslinkaddress">
+        <s:annotation>
+          <s:documentation>Addresslink address</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="erhistory" type="tns:ArrayOfErhistoryitem">
+        <s:annotation>
+          <s:documentation>Previous Electoral Roll items</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="notices" type="tns:ArrayOfNotice">
+        <s:annotation>
+          <s:documentation>Contains all details for a data level NOC or NOD</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+    <s:attribute name="declared" type="s:int" use="required" />
+  </s:complexType>
+  <s:complexType name="MatchedIndividual">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="nameinput" type="tns:name">
+        <s:annotation>
+          <s:documentation>XML Block containing the applicants name details. The name object contains details of title, forename, othernames and surname input</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="currentaddressinput" type="tns:address">
+        <s:annotation>
+          <s:documentation>XML Block containing the applicants current address details. The address object contains details of the current address input</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="namematched" type="tns:name">
+        <s:annotation>
+          <s:documentation>XML Block containing the matched name. The name object contains details of title, forename, othernames and surname matched</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="currentaddressmatched" type="tns:address">
+        <s:annotation>
+          <s:documentation>XML Block containing the matched address. The address object contains details of the current address matched</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="previousaddressinput" type="tns:address">
+        <s:annotation>
+          <s:documentation>XML block containing requested address. The address object contains details of the previous address input</s:documentation>
+        </s:annotation>
+      </s:element>
+      <s:element minOccurs="0" maxOccurs="1" name="previousaddressmatched" type="tns:address">
+        <s:annotation>
+          <s:documentation>XML block containing the matched address. The address object contains details of the previous address matched</s:documentation>
+        </s:annotation>
+      </s:element>
+    </s:sequence>
+  </s:complexType>
+  <s:element name="Search06bResponse">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="Search06bResult" type="tns:callmlsearch6_1" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="SubsequentSearch06b">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="searchGuid" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="identities" type="tns:newidentities" />
+        <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="yourRef" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:complexType name="newidentities">
+    <s:sequence>
+      <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfIdentity" />
+    </s:sequence>
+  </s:complexType>
+  <s:element name="SubsequentSearch06bResponse">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="SubsequentSearch06bResult" type="tns:callmlsearch6_1" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="OverrideDecision06b">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="searchGuid" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="decision" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="yourRef" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="OverrideDecision06bResponse">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="OverrideDecision06bResult" type="tns:callmlsearch6_1" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="AddressLinkSearch06b">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="searchGuid" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="linkID" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="ipAddress" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="yourRef" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="AddressLinkSearch06bResponse">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="AddressLinkSearch06bResult" type="tns:callmlsearch6_1" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="ChangePassword06b">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+        <s:element minOccurs="0" maxOccurs="1" name="confirmationPassword" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:element name="ChangePassword06bResponse">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="1" maxOccurs="1" name="ChangePassword06bResult" type="s:boolean" />
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+</s:schema>

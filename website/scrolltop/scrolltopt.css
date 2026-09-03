@@ -1,0 +1,112 @@
+﻿.scrolltop
+{
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-family: 'Sans-serif';
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #da251c;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+/* line 21, ../../sass/jquery.scrolltop.scss */
+.scrolltop:visited
+{
+    color: #b3b3b3;
+}
+/* line 24, ../../sass/jquery.scrolltop.scss */
+.scrolltop:hover
+{
+    text-decoration: none;
+    color: white;
+    background-color: #00579c;
+}
+/* line 28, ../../sass/jquery.scrolltop.scss */
+.scrolltop:focus
+{
+    text-decoration: none;
+}
+/* line 31, ../../sass/jquery.scrolltop.scss */
+.scrolltop.active
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.custom-scrolltop
+{
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 480px)
+{
+    .scrolltop
+    {
+        position: fixed;
+        right: 0px;
+        bottom: 50px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        font-family: 'Sans-serif';
+        font-size: 1.5em;
+        text-align: center;
+        text-decoration: none;
+        background-color: #00579c;
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+}
+
+
+/*ul {
+    list-style-image: url(../../website/Images/arrow.png);
+}
+
+li 
+{
+background: url(../../website/Images/arrow.png) left center no-repeat;
+padding: 5px 2px 5px 2px;
+margin-left: 24px;
+
+}*/
+
+li {
+        position: relative;
+        list-style-type: none;
+        padding-left:10px;
+    }
+
+    li:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -16px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../../website/Images/arrow1.png);
+        
+    }

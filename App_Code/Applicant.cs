@@ -1,0 +1,1849 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+
+/// <summary>
+/// Summary description for ResidentUser
+/// </summary>
+public class Applicant
+{
+
+    public Applicant()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+
+    private string _AppId;
+    private string _AcId;
+    private string _RefId;
+    private string _ReferenceNo;
+    private string _CusId;
+    private int _Sequence;
+    private string _IsPrimary;
+    private string _Title;
+    private string _FirstNm;
+    private string _MidNm;
+    private string _SurNm;
+    private string _Gender;
+
+    private string _PlaceOfBirth;
+    private string _MothersMaidenNm;
+
+    private string _Citizenship;
+    private string _MaritalSts;
+    private string _MaritalStsOth;
+    private string _DOB;
+    private string _HomeTelNo;
+    private string _MobileNo;
+    private string _EmailAddr;
+
+    private string _IdenDtls;
+    private string _IsUkPsPrt;
+    private string _PsPrtIssDt;
+    private string _PsPrtExpDt;
+    private string _PsPrtIsCntry;
+    private string _PsPrtName;
+    private string _IdenNo;
+
+    //DrivingLicence Details created by Rajesh
+    private string _DrLceIssDt;
+    private string _DrLceExpDt;
+    private string _DrLceType;
+    private string _DrLceIdenNo;
+    private string _DrLcePCode;
+    private string _CurAddr4;
+    private string _CurAddr5;
+
+
+    private string _EmpType;
+    private string _EmptypOth;
+
+    private string _UsePrimaryAddr;
+
+    private string _CurDoorNo;
+    private string _CurAddr1;
+    private string _CurAddr2;
+    private string _CurAddr3;
+    private string _CurTown;
+    private string _CurCounty;
+    private string _CurPcode;
+    private string _CurCntry;
+    private string _ResidingSince;
+    private string _MailingAddr;
+    private string _PreDoorNo;
+    private string _PreAddr1;
+    private string _PreAddr2;
+    private string _PreAddr3;
+    private string _PreTown;
+    private string _PreCounty;
+    private string _PrePcode;
+    private string _PreCntry;
+
+    private int _Score;
+    private string _BandText;
+    private string _Result;
+    private string _AuthDateTime;
+    private string _WSProfileId;
+    private string _WSProfileName;
+
+    private string _AuthProvider;
+    private string _AuthReqRef;
+    private string _AuthID;
+    private string _AuthKey;
+    private string _AuthScore;
+    private string _AuthResult;
+    private string _AuthDate;
+    private string _AuthTime;
+    private string _ReAuthProvider;
+    private string _ReAuthReqRef;
+    private string _ReAuthID;
+    private string _ReAuthKey;
+    private string _ReAuthScore;
+    private string _ReAuthResult;
+    private string _ReAuthDate;
+    private string _ReAuthTime;
+    private string _IsIdDocRcvd;
+    private string _IdDocRcvdDate;
+    private string _IdDocRcvdTime;
+    private string _IdDocRcvdBy;
+    private string _IdDocRemarks;
+    private string _KYCstatus;
+
+    private string _ProofOfDocNm;
+    private string _ApproveRemarks;
+    private string _DocSubmitDate;
+    private string _DocSubmitTime;
+    private string _DocVerifiedBy;
+
+    private string _NINO;
+    private string _MPAN;
+    private string _OthBankSrtCd;
+    private string _OthBankAcNo;
+
+    private string _ActionCode;
+
+    /* FATCA / CRS  */
+
+    private string _IsUSperson;
+    private string _PriJrsdctn;
+    private string _PriTIN;
+    private string _AdJrsdctn1;
+    private string _AdTIN1;
+    private string _AdJrsdctn2;
+    private string _AdTIN2;
+    private string _ResnNAPTIN;
+
+    /* FATCA / CRS  */
+
+    /*FATCA DETAILS -chella(20171005)*/
+    private string _PayTax;
+    private string _USCitizen;
+    private string _GreenCard;
+    private string _RealEst;
+    private string _assets;
+
+    private string _sof;
+    private string _sofOth;
+
+    //2024 - 2023 Enhancements
+    private string _EMVerSts;
+    public string EMVerSts
+    {
+        get
+        {
+            if (_EMVerSts == null)
+            {
+                _EMVerSts = string.Empty;
+            }
+            return _EMVerSts;
+        }
+        set
+        {
+            _EMVerSts = value;
+        }
+    }
+    //End
+
+    public string ActionCode
+    {
+        get
+        {
+            if (_ActionCode == null)
+            {
+                _ActionCode = string.Empty;
+            }
+            return _ActionCode;
+        }
+        set
+        {
+            _ActionCode = value;
+        }
+    }
+
+    public string AppId
+    {
+        get
+        {
+            if (_AppId == null)
+            {
+                _AppId = string.Empty;
+            }
+            return _AppId;
+        }
+        set
+        {
+            _AppId = value;
+        }
+    }
+
+    public string AcId
+    {
+        get
+        {
+            if (_AcId == null)
+            {
+                _AcId = string.Empty;
+            }
+            return _AcId;
+        }
+        set
+        {
+            _AcId = value;
+        }
+    }
+    public string RegUniqueId
+    {
+        get
+        {
+            if (_RefId == null)
+            {
+                _RefId = string.Empty;
+            }
+            return _RefId;
+        }
+        set
+        {
+            _RefId = value;
+        }
+    }
+    public string ReferenceNo
+    {
+        get
+        {
+            if (_ReferenceNo == null)
+            {
+                _ReferenceNo = string.Empty;
+            }
+            return _ReferenceNo;
+        }
+        set
+        {
+            _ReferenceNo = value;
+        }
+    }
+
+    //_CusId
+
+    public string CusId
+    {
+        get
+        {
+            if (_CusId == null)
+            {
+                _CusId = string.Empty;
+            }
+            return _CusId;
+        }
+        set
+        {
+            _CusId = value;
+        }
+    }
+
+    public int Sequence { get; set; }
+
+    public string IsPrimary
+    {
+        get
+        {
+            if ((_IsPrimary == null) || (_IsPrimary.Trim().Length == 0))
+            {
+                _IsPrimary = "No";
+            }
+
+            return _IsPrimary;
+        }
+        set
+        {
+            _IsPrimary = value;
+        }
+    }
+
+    public string Title
+    {
+        get
+        {
+            if ((_Title == null) || (_Title.Trim() == "-1"))
+            {
+                _Title = string.Empty;
+            }
+            return _Title;
+        }
+        set
+        {
+            _Title = value;
+        }
+    }
+    public string FirstNm
+    {
+        get
+        {
+            if (_FirstNm == null)
+            {
+                _FirstNm = string.Empty;
+            }
+            return _FirstNm;
+        }
+        set
+        {
+            _FirstNm = value;
+        }
+    }
+    public string MidNm
+    {
+        get
+        {
+            if (_MidNm == null)
+            {
+                _MidNm = string.Empty;
+            }
+            return _MidNm;
+        }
+        set
+        {
+            _MidNm = value;
+        }
+    }
+    public string SurNm
+    {
+        get
+        {
+            if (_SurNm == null)
+            {
+                _SurNm = string.Empty;
+            }
+            return _SurNm;
+        }
+        set
+        {
+            _SurNm = value;
+        }
+    }
+    public string Gender
+    {
+        get
+        {
+            if (_Gender == null)
+            {
+                _Gender = string.Empty;
+            }
+            return _Gender;
+        }
+        set
+        {
+            _Gender = value;
+        }
+    }
+
+    public string MothersMaidenNm
+    {
+        get
+        {
+            if (_MothersMaidenNm == null)
+            {
+                _MothersMaidenNm = string.Empty;
+            }
+            return _MothersMaidenNm;
+        }
+        set
+        {
+            _MothersMaidenNm = value;
+        }
+    }
+
+    public string PlaceOfBirth
+    {
+        get
+        {
+            if (_PlaceOfBirth == null)
+            {
+                _PlaceOfBirth = string.Empty;
+            }
+            return _PlaceOfBirth;
+        }
+        set
+        {
+            _PlaceOfBirth = value;
+        }
+    }
+
+    public string Citizenship
+    {
+        get
+        {
+            if ((_Citizenship == null) || (_Citizenship.Trim() == "-1"))
+            {
+                _Citizenship = string.Empty;
+            }
+            return _Citizenship;
+        }
+        set
+        {
+            _Citizenship = value;
+        }
+    }
+    public string MaritalSts
+    {
+        get
+        {
+            if ((_MaritalSts == null) || (_MaritalSts.Trim() == "-1"))
+            {
+                _MaritalSts = string.Empty;
+            }
+            return _MaritalSts;
+        }
+        set
+        {
+            _MaritalSts = value;
+        }
+    }
+    public string MaritalStsOth
+    {
+        get
+        {
+            if (_MaritalStsOth == null)
+            {
+                _MaritalStsOth = string.Empty;
+            }
+            return _MaritalStsOth;
+        }
+        set
+        {
+            _MaritalStsOth = value;
+        }
+    }
+    public string DOB
+    {
+        get
+        {
+            if (_DOB == null)
+            {
+                _DOB = string.Empty;
+            }
+            return _DOB;
+        }
+        set
+        {
+            _DOB = value;
+        }
+    }
+
+    public string HomeTelNo
+    {
+        get
+        {
+            if (_HomeTelNo == null)
+            {
+                _HomeTelNo = string.Empty;
+            }
+            return _HomeTelNo;
+        }
+        set
+        {
+            _HomeTelNo = value;
+        }
+    }
+    public string MobileNo
+    {
+        get
+        {
+            if (_MobileNo == null)
+            {
+                _MobileNo = string.Empty;
+            }
+            return _MobileNo;
+        }
+        set
+        {
+            _MobileNo = value;
+        }
+    }
+    public string EmailAddr
+    {
+        get
+        {
+            if (_EmailAddr == null)
+            {
+                _EmailAddr = string.Empty;
+            }
+            return _EmailAddr;
+        }
+        set
+        {
+            _EmailAddr = value;
+        }
+    }
+
+    public string IdenDtls
+    {
+        get
+        {
+            if (_IdenDtls == null)
+            {
+                _IdenDtls = string.Empty;
+            }
+            return _IdenDtls;
+        }
+        set
+        {
+            _IdenDtls = value;
+        }
+    }
+    public string IsUkPsPrt
+    {
+        get
+        {
+            if (_IsUkPsPrt == null)
+            {
+                _IsUkPsPrt = string.Empty;
+            }
+            return _IsUkPsPrt;
+        }
+        set
+        {
+            _IsUkPsPrt = value;
+        }
+    }
+    public string PsPrtIssDt
+    {
+        get
+        {
+            if (_PsPrtIssDt == null)
+            {
+                _PsPrtIssDt = string.Empty;
+            }
+            return _PsPrtIssDt;
+        }
+        set
+        {
+            _PsPrtIssDt = value;
+        }
+    }
+    public string PsPrtExpDt
+    {
+        get
+        {
+            if (_PsPrtExpDt == null)
+            {
+                _PsPrtExpDt = string.Empty;
+            }
+            return _PsPrtExpDt;
+        }
+        set
+        {
+            _PsPrtExpDt = value;
+        }
+    }
+
+    public string DrLceIssDt
+    {
+        get
+        {
+            if (_PsPrtExpDt == null)
+            {
+                _PsPrtExpDt = string.Empty;
+            }
+            return _PsPrtExpDt;
+        }
+        set
+        {
+            _PsPrtExpDt = value;
+        }
+    }
+
+    public string DrLceExpDt
+    {
+        get
+        {
+            if (_DrLceExpDt == null)
+            {
+                _DrLceExpDt = string.Empty;
+            }
+            return _DrLceExpDt;
+        }
+        set
+        {
+            _DrLceExpDt = value;
+        }
+    }
+
+    public string DrLceIdenNo
+    {
+        get
+        {
+            if (_DrLceIdenNo == null)
+            {
+                _DrLceIdenNo = string.Empty;
+            }
+            return _DrLceIdenNo;
+        }
+        set
+        {
+            _DrLceIdenNo = value;
+        }
+    }
+
+    public string DrLceType
+    {
+        get
+        {
+            if (_DrLceType == null)
+            {
+                _DrLceType = string.Empty;
+            }
+            return _DrLceType;
+        }
+        set
+        {
+            _DrLceType = value;
+        }
+    }
+
+    public string DrLcePCode
+    {
+        get
+        {
+            if (_DrLcePCode == null)
+            {
+                _DrLcePCode = string.Empty;
+            }
+            return _DrLcePCode;
+        }
+        set
+        {
+            _DrLcePCode = value;
+        }
+    }
+
+    public string CurAddr4
+    {
+        get { return _CurAddr4; }
+        set { _CurAddr4 = value; }
+    }
+    public string CurAddr5
+    {
+        get { return _CurAddr5; }
+        set { _CurAddr5 = value; }
+    }
+
+
+    public string EmpType
+    {
+        get
+        {
+            if ((_EmpType == null) || (_EmpType.Trim() == "-1"))
+            {
+                _EmpType = string.Empty;
+            }
+            return _EmpType;
+        }
+        set
+        {
+            _EmpType = value;
+        }
+    }
+
+    public string EmptypOth
+    {
+        get
+        {
+            if ((_EmptypOth == null) || (_EmptypOth.Trim() == "-1"))
+            {
+                _EmptypOth = string.Empty;
+            }
+            return _EmptypOth;
+        }
+        set
+        {
+            _EmptypOth = value;
+        }
+    }
+
+    public string PsPrtIsCntry
+    {
+        get
+        {
+            if (_PsPrtIsCntry == null)
+            {
+                _PsPrtIsCntry = string.Empty;
+            }
+            return _PsPrtIsCntry;
+        }
+        set
+        {
+            _PsPrtIsCntry = value;
+        }
+    }
+
+    public string PsPrtName
+    {
+        get
+        {
+            if (_PsPrtName == null)
+            {
+                _PsPrtName = string.Empty;
+            }
+            return _PsPrtName;
+        }
+        set
+        {
+            _PsPrtName = value;
+        }
+    }
+
+    public string IdenNo
+    {
+        get
+        {
+            if (_IdenNo == null)
+            {
+                _IdenNo = string.Empty;
+            }
+            return _IdenNo;
+        }
+        set
+        {
+            _IdenNo = value;
+        }
+    }
+
+    public string UsePrimaryAddr
+    {
+        get
+        {
+            if ((_UsePrimaryAddr == null) || (_UsePrimaryAddr.Trim().Length == 0))
+            {
+                _UsePrimaryAddr = "No";
+            }
+            return _UsePrimaryAddr;
+        }
+        set
+        {
+            _UsePrimaryAddr = value;
+        }
+    }
+
+    public string CurDoorNo
+    {
+        get
+        {
+            if (_CurDoorNo == null)
+            {
+                _CurDoorNo = string.Empty;
+            }
+            return _CurDoorNo;
+        }
+        set
+        {
+            _CurDoorNo = value;
+        }
+    }
+    public string CurAddr1
+    {
+        get
+        {
+            if (_CurAddr1 == null)
+            {
+                _CurAddr1 = string.Empty;
+            }
+            return _CurAddr1;
+        }
+        set
+        {
+            _CurAddr1 = value;
+        }
+    }
+    public string CurAddr2
+    {
+        get
+        {
+            if (_CurAddr2 == null)
+            {
+                _CurAddr2 = string.Empty;
+            }
+            return _CurAddr2;
+        }
+        set
+        {
+            _CurAddr2 = value;
+        }
+    }
+    public string CurAddr3
+    {
+        get
+        {
+            if (_CurAddr3 == null)
+            {
+                _CurAddr3 = string.Empty;
+            }
+            return _CurAddr3;
+        }
+        set
+        {
+            _CurAddr3 = value;
+        }
+    }
+    public string CurTown { get; set; }
+    public string CurCounty
+    {
+        get
+        {
+            if (_CurCounty == null)
+            {
+                _CurCounty = string.Empty;
+            }
+            return _CurCounty;
+        }
+        set
+        {
+            _CurCounty = value;
+        }
+    }
+    public string CurPcode
+    {
+        get
+        {
+            if (_CurPcode == null)
+            {
+                _CurPcode = string.Empty;
+            }
+            return _CurPcode;
+        }
+        set
+        {
+            _CurPcode = value;
+        }
+    }
+    public string CurCntry
+    {
+        get
+        {
+            if ((_CurCntry == null) || (_CurCntry.Trim() == "-1"))
+            {
+                _CurCntry = string.Empty;
+            }
+            return _CurCntry;
+        }
+        set
+        {
+            _CurCntry = value;
+        }
+    }
+    public string ResidingSince
+    {
+        get
+        {
+            if (_ResidingSince == null)
+            {
+                _ResidingSince = string.Empty;
+            }
+            return _ResidingSince;
+        }
+        set
+        {
+            _ResidingSince = value;
+        }
+    }
+
+    public string MailingAddr
+    {
+        get
+        {
+            if ((_MailingAddr == null) || (_MailingAddr.Trim().Length == 0))
+            {
+                _MailingAddr = "Same";
+            }
+            return _MailingAddr;
+        }
+        set
+        {
+            _MailingAddr = value;
+        }
+    }
+
+    public string PreDoorNo
+    {
+        get
+        {
+            if (_PreDoorNo == null)
+            {
+                _PreDoorNo = string.Empty;
+            }
+            return _PreDoorNo;
+        }
+        set
+        {
+            _PreDoorNo = value;
+        }
+    }
+    public string PreAddr1
+    {
+        get
+        {
+            if (_PreAddr1 == null)
+            {
+                _PreAddr1 = string.Empty;
+            }
+            return _PreAddr1;
+        }
+        set
+        {
+            _PreAddr1 = value;
+        }
+    }
+    public string PreAddr2
+    {
+        get
+        {
+            if (_PreAddr2 == null)
+            {
+                _PreAddr2 = string.Empty;
+            }
+            return _PreAddr2;
+        }
+        set
+        {
+            _PreAddr2 = value;
+        }
+    }
+    public string PreAddr3
+    {
+        get
+        {
+            if (_PreAddr3 == null)
+            {
+                _PreAddr3 = string.Empty;
+            }
+            return _PreAddr3;
+        }
+        set
+        {
+            _PreAddr3 = value;
+        }
+    }
+    public string PreTown { get; set; }
+    public string PreCounty
+    {
+        get
+        {
+            if (_PreCounty == null)
+            {
+                _PreCounty = string.Empty;
+            }
+            return _PreCounty;
+        }
+        set
+        {
+            _PreCounty = value;
+        }
+    }
+    public string PrePcode
+    {
+        get
+        {
+            if (_PrePcode == null)
+            {
+                _PrePcode = string.Empty;
+            }
+            return _PrePcode;
+        }
+        set
+        {
+            _PrePcode = value;
+        }
+    }
+    public string PreCntry
+    {
+        get
+        {
+            if ((_PreCntry == null) || (_PreCntry.Trim() == "-1"))
+            {
+                _PreCntry = string.Empty;
+            }
+            return _PreCntry;
+        }
+        set
+        {
+            _PreCntry = value;
+        }
+    }
+
+    public int? Score { get; set; }
+
+    //public string Score
+    //{
+    //    get
+    //    {
+    //        if (_Score == null)
+    //        {
+    //            _Score = string.Empty;
+    //        }
+    //        return _Score;
+    //    }
+    //    set
+    //    {
+    //        _Score = value;
+    //    }
+    //}
+
+    public string BandText
+    {
+        get
+        {
+            if (_BandText == null)
+            {
+                _BandText = string.Empty;
+            }
+            return _BandText;
+        }
+        set
+        {
+            _BandText = value;
+        }
+    }
+
+    public string Result
+    {
+        get
+        {
+            if (_Result == null)
+            {
+                _Result = string.Empty;
+            }
+            return _Result;
+        }
+        set
+        {
+            _Result = value;
+        }
+    }
+
+    //public string AuthID
+    //{
+    //    get
+    //    {
+    //        if (_AuthID == null)
+    //        {
+    //            _AuthID = string.Empty;
+    //        }
+    //        return _AuthID;
+    //    }
+    //    set
+    //    {
+    //        _AuthID = value;
+    //    }
+    //}
+
+
+    public string AuthDateTime
+    {
+        get
+        {
+            if (_AuthDateTime == null)
+            {
+                _AuthDateTime = string.Empty;
+            }
+            return _AuthDateTime;
+        }
+        set
+        {
+            _AuthDateTime = value;
+        }
+    }
+
+
+    public string WSProfileId
+    {
+        get
+        {
+            if (_WSProfileId == null)
+            {
+                _WSProfileId = string.Empty;
+            }
+            return _WSProfileId;
+        }
+        set
+        {
+            _WSProfileId = value;
+        }
+    }
+
+
+    public string WSProfileName
+    {
+        get
+        {
+            if (_WSProfileName == null)
+            {
+                _WSProfileName = string.Empty;
+            }
+            return _WSProfileName;
+        }
+        set
+        {
+            _WSProfileName = value;
+        }
+    }
+
+    public string AuthProvider
+    {
+        get
+        {
+            if (_AuthProvider == null)
+            {
+                _AuthProvider = string.Empty;
+            }
+            return _AuthProvider;
+        }
+        set
+        {
+            _AuthProvider = value;
+        }
+    }
+    public string AuthReqRef
+    {
+        get
+        {
+            if (_AuthReqRef == null)
+            {
+                _AuthReqRef = string.Empty;
+            }
+            return _AuthReqRef;
+        }
+        set
+        {
+            _AuthReqRef = value;
+        }
+    }
+    public string AuthID
+    {
+        get
+        {
+            if (_AuthID == null)
+            {
+                _AuthID = string.Empty;
+            }
+            return _AuthID;
+        }
+        set
+        {
+            _AuthID = value;
+        }
+    }
+    public string AuthKey
+    {
+        get
+        {
+            if (_AuthKey == null)
+            {
+                _AuthKey = string.Empty;
+            }
+            return _AuthKey;
+        }
+        set
+        {
+            _AuthKey = value;
+        }
+    }
+    public string AuthScore
+    {
+        get
+        {
+            if (_AuthScore == null)
+            {
+                _AuthScore = string.Empty;
+            }
+            return _AuthScore;
+        }
+        set
+        {
+            _AuthScore = value;
+        }
+    }
+    public string AuthResult
+    {
+        get
+        {
+            if (_AuthResult == null)
+            {
+                _AuthResult = string.Empty;
+            }
+            return _AuthResult;
+        }
+        set
+        {
+            _AuthResult = value;
+        }
+    }
+    public string AuthDate
+    {
+        get
+        {
+            if (_AuthDate == null)
+            {
+                _AuthDate = string.Empty;
+            }
+            return _AuthDate;
+        }
+        set
+        {
+            _AuthDate = value;
+        }
+    }
+    public string AuthTime
+    {
+        get
+        {
+            if (_AuthTime == null)
+            {
+                _AuthTime = string.Empty;
+            }
+            return _AuthTime;
+        }
+        set
+        {
+            _AuthTime = value;
+        }
+    }
+    public string ReAuthProvider
+    {
+        get
+        {
+            if (_ReAuthProvider == null)
+            {
+                _ReAuthProvider = string.Empty;
+            }
+            return _ReAuthProvider;
+        }
+        set
+        {
+            _ReAuthProvider = value;
+        }
+    }
+    public string ReAuthReqRef
+    {
+        get
+        {
+            if (_ReAuthReqRef == null)
+            {
+                _ReAuthReqRef = string.Empty;
+            }
+            return _ReAuthReqRef;
+        }
+        set
+        {
+            _ReAuthReqRef = value;
+        }
+    }
+    public string ReAuthID
+    {
+        get
+        {
+            if (_ReAuthID == null)
+            {
+                _ReAuthID = string.Empty;
+            }
+            return _ReAuthID;
+        }
+        set
+        {
+            _ReAuthID = value;
+        }
+    }
+    public string ReAuthKey
+    {
+        get
+        {
+            if (_ReAuthKey == null)
+            {
+                _ReAuthKey = string.Empty;
+            }
+            return _ReAuthKey;
+        }
+        set
+        {
+            _ReAuthKey = value;
+        }
+    }
+    public string ReAuthScore
+    {
+        get
+        {
+            if (_ReAuthScore == null)
+            {
+                _ReAuthScore = string.Empty;
+            }
+            return _ReAuthScore;
+        }
+        set
+        {
+            _ReAuthScore = value;
+        }
+    }
+    public string ReAuthResult
+    {
+        get
+        {
+            if (_ReAuthResult == null)
+            {
+                _ReAuthResult = string.Empty;
+            }
+            return _ReAuthResult;
+        }
+        set
+        {
+            _ReAuthResult = value;
+        }
+    }
+    public string ReAuthDate
+    {
+        get
+        {
+            if (_ReAuthDate == null)
+            {
+                _ReAuthDate = string.Empty;
+            }
+            return _ReAuthDate;
+        }
+        set
+        {
+            _ReAuthDate = value;
+        }
+    }
+    public string ReAuthTime
+    {
+        get
+        {
+            if (_ReAuthTime == null)
+            {
+                _ReAuthTime = string.Empty;
+            }
+            return _ReAuthTime;
+        }
+        set
+        {
+            _ReAuthTime = value;
+        }
+    }
+    public string IsIdDocRcvd
+    {
+        get
+        {
+            if (_IsIdDocRcvd == null)
+            {
+                _IsIdDocRcvd = string.Empty;
+            }
+            return _IsIdDocRcvd;
+        }
+        set
+        {
+            _IsIdDocRcvd = value;
+        }
+    }
+    public string IdDocRcvdDate
+    {
+        get
+        {
+            if (_IdDocRcvdDate == null)
+            {
+                _IdDocRcvdDate = string.Empty;
+            }
+            return _IdDocRcvdDate;
+        }
+        set
+        {
+            _IdDocRcvdDate = value;
+        }
+    }
+    public string IdDocRcvdTime
+    {
+        get
+        {
+            if (_IdDocRcvdTime == null)
+            {
+                _IdDocRcvdTime = string.Empty;
+            }
+            return _IdDocRcvdTime;
+        }
+        set
+        {
+            _IdDocRcvdTime = value;
+        }
+    }
+    public string IdDocRcvdBy
+    {
+        get
+        {
+            if (_IdDocRcvdBy == null)
+            {
+                _IdDocRcvdBy = string.Empty;
+            }
+            return _IdDocRcvdBy;
+        }
+        set
+        {
+            _IdDocRcvdBy = value;
+        }
+    }
+    public string IdDocRemarks
+    {
+        get
+        {
+            if (_IdDocRemarks == null)
+            {
+                _IdDocRemarks = string.Empty;
+            }
+            return _IdDocRemarks;
+        }
+        set
+        {
+            _IdDocRemarks = value;
+        }
+    }
+
+    public string KYCstatus
+    {
+        get
+        {
+            if (_KYCstatus == null)
+            {
+                _KYCstatus = string.Empty;
+            }
+            return _KYCstatus;
+        }
+        set
+        {
+            _KYCstatus = value;
+        }
+    }
+
+    public string ProofOfDocNm
+    {
+        get
+        {
+            if (_ProofOfDocNm == null)
+            {
+                _ProofOfDocNm = string.Empty;
+            }
+            return _ProofOfDocNm;
+        }
+        set
+        {
+            _ProofOfDocNm = value;
+        }
+    }
+
+    public string ApproveRemarks
+    {
+        get
+        {
+            if (_ApproveRemarks == null)
+            {
+                _ApproveRemarks = string.Empty;
+            }
+            return _ApproveRemarks;
+        }
+        set
+        {
+            _ApproveRemarks = value;
+        }
+    }
+
+    public string DocSubmitDate
+    {
+        get
+        {
+            if (_DocSubmitDate == null)
+            {
+                _DocSubmitDate = string.Empty;
+            }
+            return _DocSubmitDate;
+        }
+        set
+        {
+            _DocSubmitDate = value;
+        }
+    }
+
+    public string DocSubmitTime
+    {
+        get
+        {
+            if (_DocSubmitTime == null)
+            {
+                _DocSubmitTime = string.Empty;
+            }
+            return _DocSubmitTime;
+        }
+        set
+        {
+            _DocSubmitTime = value;
+        }
+    }
+
+    public string DocVerifiedBy
+    {
+        get
+        {
+            if (_DocVerifiedBy == null)
+            {
+                _DocVerifiedBy = string.Empty;
+            }
+            return _DocVerifiedBy;
+        }
+        set
+        {
+            _DocVerifiedBy = value;
+        }
+    }
+
+    public string NINO
+    {
+        get
+        {
+            if (_NINO == null)
+            {
+                _NINO = string.Empty;
+            }
+            return _NINO;
+        }
+        set
+        {
+            _NINO = value;
+        }
+    }
+
+    public string MPAN
+    {
+        get
+        {
+            if (_MPAN == null)
+            {
+                _MPAN = string.Empty;
+            }
+            return _MPAN;
+        }
+        set
+        {
+            _MPAN = value;
+        }
+    }
+
+    public string OthBankSrtCd
+    {
+        get
+        {
+            if (_OthBankSrtCd == null)
+            {
+                _OthBankSrtCd = string.Empty;
+            }
+            return _OthBankSrtCd;
+        }
+        set
+        {
+            _OthBankSrtCd = value;
+        }
+    }
+
+    public string OthBankAcNo
+    {
+        get
+        {
+            if (_OthBankAcNo == null)
+            {
+                _OthBankAcNo = string.Empty;
+            }
+            return _OthBankAcNo;
+        }
+        set
+        {
+            _OthBankAcNo = value;
+        }
+    }
+
+
+    /* FATCA / CRS */
+
+    public string IsUSperson
+    {
+        get
+        {
+            if (_IsUSperson == null)
+            {
+                _IsUSperson = string.Empty;
+            }
+            return _IsUSperson;
+        }
+        set
+        {
+            _IsUSperson = value;
+        }
+    }
+
+    public string PriJrsdctn
+    {
+        get
+        {
+            if ((_PriJrsdctn == null) || (_PriJrsdctn.Trim() == "-1"))
+            {
+                _PriJrsdctn = string.Empty;
+            }
+            return _PriJrsdctn;
+        }
+        set
+        {
+            _PriJrsdctn = value;
+        }
+    }
+
+    public string PriTIN
+    {
+        get
+        {
+            if (_PriTIN == null)
+            {
+                _PriTIN = string.Empty;
+            }
+            return _PriTIN;
+        }
+        set
+        {
+            _PriTIN = value;
+        }
+    }
+
+    public string AdJrsdctn1
+    {
+        get
+        {
+            if ((_AdJrsdctn1 == null) || (_AdJrsdctn1.Trim() == "-1"))
+            {
+                _AdJrsdctn1 = string.Empty;
+            }
+            return _AdJrsdctn1;
+        }
+        set
+        {
+            _AdJrsdctn1 = value;
+        }
+    }
+
+    public string AdTIN1
+    {
+        get
+        {
+            if (_AdTIN1 == null)
+            {
+                _AdTIN1 = string.Empty;
+            }
+            return _AdTIN1;
+        }
+        set
+        {
+            _AdTIN1 = value;
+        }
+    }
+
+    public string AdJrsdctn2
+    {
+        get
+        {
+            if ((_AdJrsdctn2 == null) || (_AdJrsdctn2.Trim() == "-1"))
+            {
+                _AdJrsdctn2 = string.Empty;
+            }
+            return _AdJrsdctn2;
+        }
+        set
+        {
+            _AdJrsdctn2 = value;
+        }
+    }
+
+    public string AdTIN2
+    {
+        get
+        {
+            if (_AdTIN2 == null)
+            {
+                _AdTIN2 = string.Empty;
+            }
+            return _AdTIN2;
+        }
+        set
+        {
+            _AdTIN2 = value;
+        }
+    }
+
+    public string ResnNAPTIN
+    {
+        get
+        {
+            if (_ResnNAPTIN == null)
+            {
+                _ResnNAPTIN = string.Empty;
+            }
+            return _ResnNAPTIN;
+        }
+        set
+        {
+            _ResnNAPTIN = value;
+        }
+    }
+
+    /* FATCA / CRS */
+
+    /*FATCA DETAILS - chella(20171005)*/
+    public string PayTax
+    {
+        get
+        {
+            if (_PayTax == null)
+            {
+                _PayTax = string.Empty;
+            }
+            return _PayTax;
+        }
+        set
+        {
+            _PayTax = value;
+        }
+    }
+    public string USCitizen
+    {
+        get
+        {
+            if (_USCitizen == null)
+            {
+                _USCitizen = string.Empty;
+            }
+            return _USCitizen;
+        }
+        set
+        {
+            _USCitizen = value;
+        }
+    }
+    public string GreenCard
+    {
+        get
+        {
+            if (_GreenCard == null)
+            {
+                _GreenCard = string.Empty;
+            }
+            return _GreenCard;
+        }
+        set
+        {
+            _GreenCard = value;
+        }
+    }
+    public string RealEst
+    {
+        get
+        {
+            if (_RealEst == null)
+            {
+                _RealEst = string.Empty;
+            }
+            return _RealEst;
+        }
+        set
+        {
+            _RealEst = value;
+        }
+    }
+    public string assets
+    {
+        get
+        {
+            if (_assets == null)
+            {
+                _assets = string.Empty;
+            }
+            return _assets;
+        }
+        set
+        {
+            _assets = value;
+        }
+    }
+    /*FATCA DETAILS*/
+    //public string sof
+    //{
+    //    get
+    //    {
+    //        if (_sof == null)
+    //        {
+    //            _sof = string.Empty;
+    //        }
+    //        return _sof;
+    //    }
+    //    set
+    //    {
+    //        _sof = value;
+    //    }
+    //}
+
+    public string sof
+    {
+        get
+        {
+            if ((_sof == null) || (_sof.Trim() == "-1"))
+            {
+                _sof = string.Empty;
+            }
+            return _sof;
+        }
+        set
+        {
+            _sof = value;
+        }
+    }
+
+    public string sofOth
+    {
+        get
+        {
+            if (_sofOth == null)
+            {
+                _sofOth = string.Empty;
+            }
+            return _sofOth;
+        }
+        set
+        {
+            _sofOth = value;
+        }
+    }
+}
+
+
+
+

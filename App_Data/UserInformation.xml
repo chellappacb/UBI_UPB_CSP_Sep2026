@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UserLoginDetials>
+  <users>
+    <UserName>Macro</UserName>
+    <Password>Apex9899*</Password>
+    <Roles>Admin,User</Roles>
+  </users>
+  <users>
+    <UserName>ubiuk</UserName>
+    <Password>L0ndon1234$</Password>
+    <Roles>Admin,User</Roles>
+  </users>
+</UserLoginDetials>

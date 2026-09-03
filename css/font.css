@@ -1,0 +1,13 @@
+﻿@font-face {
+	font-family: 'chella';
+	src: url('../font/Futura-Normal.eot'); /* IE9 Compat Modes */
+	src: url('../font/Futura-Normal.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+	src: url('../font/Futura-Normal.woff') format('woff'); 
+	     
+	}
+
+body
+{
+    font-family: chella;
+    font-size: 19px;
+}

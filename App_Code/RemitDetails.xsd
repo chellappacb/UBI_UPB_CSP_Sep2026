@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RemitDetails" targetNamespace="http://tempuri.org/RemitDetails.xsd" xmlns:mstns="http://tempuri.org/RemitDetails.xsd" xmlns="http://tempuri.org/RemitDetails.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RemitDetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="RemitDetails" msprop:Generator_UserDSName="RemitDetails">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RemitDetailTbl" msprop:Generator_TableClassName="RemitDetailTblDataTable" msprop:Generator_TableVarName="tableRemitDetailTbl" msprop:Generator_TablePropName="RemitDetailTbl" msprop:Generator_RowDeletingName="RemitDetailTblRowDeleting" msprop:Generator_UserTableName="RemitDetailTbl" msprop:Generator_RowChangingName="RemitDetailTblRowChanging" msprop:Generator_RowEvHandlerName="RemitDetailTblRowChangeEventHandler" msprop:Generator_RowDeletedName="RemitDetailTblRowDeleted" msprop:Generator_RowEvArgName="RemitDetailTblRowChangeEvent" msprop:Generator_RowChangedName="RemitDetailTblRowChanged" msprop:Generator_RowClassName="RemitDetailTblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REMID" msprop:Generator_ColumnVarNameInTable="columnREMID" msprop:Generator_ColumnPropNameInRow="REMID" msprop:Generator_ColumnPropNameInTable="REMIDColumn" msprop:Generator_UserColumnName="REMID" type="xs:string" minOccurs="0" />
+              <xs:element name="REFERENCENO" msprop:Generator_ColumnVarNameInTable="columnREFERENCENO" msprop:Generator_ColumnPropNameInRow="REFERENCENO" msprop:Generator_ColumnPropNameInTable="REFERENCENOColumn" msprop:Generator_UserColumnName="REFERENCENO" type="xs:string" minOccurs="0" />
+              <xs:element name="REMFIRSTNM" msprop:Generator_ColumnVarNameInTable="columnREMFIRSTNM" msprop:Generator_ColumnPropNameInRow="REMFIRSTNM" msprop:Generator_ColumnPropNameInTable="REMFIRSTNMColumn" msprop:Generator_UserColumnName="REMFIRSTNM" type="xs:string" minOccurs="0" />
+              <xs:element name="REMMIDNM" msprop:Generator_ColumnVarNameInTable="columnREMMIDNM" msprop:Generator_ColumnPropNameInRow="REMMIDNM" msprop:Generator_ColumnPropNameInTable="REMMIDNMColumn" msprop:Generator_UserColumnName="REMMIDNM" type="xs:string" minOccurs="0" />
+              <xs:element name="REMSURNM" msprop:Generator_ColumnVarNameInTable="columnREMSURNM" msprop:Generator_ColumnPropNameInRow="REMSURNM" msprop:Generator_ColumnPropNameInTable="REMSURNMColumn" msprop:Generator_UserColumnName="REMSURNM" type="xs:string" minOccurs="0" />
+              <xs:element name="REMACNO" msprop:Generator_ColumnVarNameInTable="columnREMACNO" msprop:Generator_ColumnPropNameInRow="REMACNO" msprop:Generator_ColumnPropNameInTable="REMACNOColumn" msprop:Generator_UserColumnName="REMACNO" type="xs:string" minOccurs="0" />
+              <xs:element name="REMDOB" msprop:Generator_ColumnVarNameInTable="columnREMDOB" msprop:Generator_ColumnPropNameInRow="REMDOB" msprop:Generator_ColumnPropNameInTable="REMDOBColumn" msprop:Generator_UserColumnName="REMDOB" type="xs:string" minOccurs="0" />
+              <xs:element name="REMAMOUNT" msprop:Generator_ColumnVarNameInTable="columnREMAMOUNT" msprop:Generator_ColumnPropNameInRow="REMAMOUNT" msprop:Generator_ColumnPropNameInTable="REMAMOUNTColumn" msprop:Generator_UserColumnName="REMAMOUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="REMCUR" msprop:Generator_ColumnVarNameInTable="columnREMCUR" msprop:Generator_ColumnPropNameInRow="REMCUR" msprop:Generator_ColumnPropNameInTable="REMCURColumn" msprop:Generator_UserColumnName="REMCUR" type="xs:string" minOccurs="0" />
+              <xs:element name="BENFIRSTNM" msprop:Generator_ColumnVarNameInTable="columnBENFIRSTNM" msprop:Generator_ColumnPropNameInRow="BENFIRSTNM" msprop:Generator_ColumnPropNameInTable="BENFIRSTNMColumn" msprop:Generator_UserColumnName="BENFIRSTNM" type="xs:string" minOccurs="0" />
+              <xs:element name="BENMIDNM" msprop:Generator_ColumnVarNameInTable="columnBENMIDNM" msprop:Generator_ColumnPropNameInRow="BENMIDNM" msprop:Generator_ColumnPropNameInTable="BENMIDNMColumn" msprop:Generator_UserColumnName="BENMIDNM" type="xs:string" minOccurs="0" />
+              <xs:element name="BENSURNM" msprop:Generator_ColumnVarNameInTable="columnBENSURNM" msprop:Generator_ColumnPropNameInRow="BENSURNM" msprop:Generator_ColumnPropNameInTable="BENSURNMColumn" msprop:Generator_UserColumnName="BENSURNM" type="xs:string" minOccurs="0" />
+              <xs:element name="BENAMOUNT" msprop:Generator_ColumnVarNameInTable="columnBENAMOUNT" msprop:Generator_ColumnPropNameInRow="BENAMOUNT" msprop:Generator_ColumnPropNameInTable="BENAMOUNTColumn" msprop:Generator_UserColumnName="BENAMOUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="EXCNGRATE" msprop:Generator_ColumnVarNameInTable="columnEXCNGRATE" msprop:Generator_ColumnPropNameInRow="EXCNGRATE" msprop:Generator_ColumnPropNameInTable="EXCNGRATEColumn" msprop:Generator_UserColumnName="EXCNGRATE" type="xs:string" minOccurs="0" />
+              <xs:element name="BENDOB" msprop:Generator_ColumnVarNameInTable="columnBENDOB" msprop:Generator_ColumnPropNameInRow="BENDOB" msprop:Generator_ColumnPropNameInTable="BENDOBColumn" msprop:Generator_UserColumnName="BENDOB" type="xs:string" minOccurs="0" />
+              <xs:element name="BENACNO" msprop:Generator_ColumnVarNameInTable="columnBENACNO" msprop:Generator_ColumnPropNameInRow="BENACNO" msprop:Generator_ColumnPropNameInTable="BENACNOColumn" msprop:Generator_UserColumnName="BENACNO" type="xs:string" minOccurs="0" />
+              <xs:element name="REMSTS" msprop:Generator_ColumnVarNameInTable="columnREMSTS" msprop:Generator_ColumnPropNameInRow="REMSTS" msprop:Generator_ColumnPropNameInTable="REMSTSColumn" msprop:Generator_UserColumnName="REMSTS" type="xs:string" minOccurs="0" />
+              <xs:element name="STATUS" msprop:Generator_ColumnVarNameInTable="columnSTATUS" msprop:Generator_ColumnPropNameInRow="STATUS" msprop:Generator_ColumnPropNameInTable="STATUSColumn" msprop:Generator_UserColumnName="STATUS" type="xs:string" minOccurs="0" />
+              <xs:element name="FromDt" msprop:Generator_ColumnVarNameInTable="columnFromDt" msprop:Generator_ColumnPropNameInRow="FromDt" msprop:Generator_ColumnPropNameInTable="FromDtColumn" msprop:Generator_UserColumnName="FromDt" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDt" msprop:Generator_ColumnVarNameInTable="columnToDt" msprop:Generator_ColumnPropNameInRow="ToDt" msprop:Generator_ColumnPropNameInTable="ToDtColumn" msprop:Generator_UserColumnName="ToDt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

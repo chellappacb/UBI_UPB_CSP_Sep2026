@@ -1,0 +1,205 @@
+﻿/*.steps ol .steps-completed::before {
+  border-color: #034489 !important;
+  background-color: #034489 !important;
+}
+
+.steps ol li .steps-icon {
+  color: #fff !important;
+  font-size: 1.1rem;
+}
+
+.steps ol .steps-completed::after {
+  background-color: #e5e5e5 !important;
+}*/
+
+
+/* -------------------------------------------------------------------------
+  VERTICAL STEPPERS
+-------------------------------------------------------------------------- *//* Steps */
+.steb
+{
+    position: relative;
+    min-height: 1em;
+    color: gray;
+}
+.steb + .steb
+{
+    margin-top: 2em;
+}
+.steb > div:first-child
+{
+    position: static;
+    height: 0;
+}
+.steb > div:not(:first-child)
+{
+    margin-left: 2em;
+    padding-left: 1em;
+}
+.steb.steb-active
+{
+    color: #4285f4;
+}
+.steb.steb-active .circla
+{
+    background-color: #4285f4;
+}
+/* circla */.circla
+{
+    background: gray;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 0 3px #fff;
+}
+/* Vertical Line */
+.circla::after
+{
+    content: ' ';
+    position: absolute;
+    display: block;
+    top: 32px;
+    right: 50%;
+    bottom: 1px;
+    left: 15px;
+    height: 67px;
+    width: 1px;
+    transform-origin: 50% -100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+.fa-check::before
+{
+    content: "\f00c";
+    margin-top: 8px;
+    display: block;
+}
+/*.circla:after
+        {
+            content: ' ';
+            position: absolute;
+            display: block;
+            top: 1px;
+            right: 50%;
+            bottom: 1px;
+            left: 50%;
+            height: 100%;
+            width: 1px;
+            transform: scale(1, 2);
+            transform-origin: 50% -100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            z-index: -1;
+        }*/
+.steb:last-child .circla:after
+{
+    display: none;
+}
+/* Stepper Titles */.titla
+{
+    line-height: 2em;
+    font-weight: bold;
+}
+.caption
+{
+    font-size: 0.8em;
+}
+
+
+/* ******************************************************
+	Responsive Grids
+*********************************************************/
+
+.rt-container
+{
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.rt-row:before, .rt-row:after
+{
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.rt-row:after
+{
+    clear: both;
+}
+[class^="col-rt-"]
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 0 15px;
+    min-height: 1px;
+    position: relative;
+}
+
+
+@media (min-width: 768px)
+{
+    .rt-container
+    {
+        width: 750px;
+    }
+    [class^="col-rt-"]
+    {
+        float: left;
+        width: 49.9999999999%;
+    }
+    .col-rt-12
+    {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1200px)
+{
+    .rt-container
+    {
+        width: 1170px;
+    }
+
+}
+
+/*Investments Page CSS*/
+#TrackBar
+{
+    padding: 25px 0 20px 0;
+}
+table#gvCUSACTS
+{
+    font-family: chella;
+}
+table#gvCUSACTS tr:nth-child(even)
+{
+    background-color: #eee;
+    border: 1px solid #e5e5e5;
+}
+table#gvCUSACTS tr:nth-child(odd)
+{
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+.dtgriddata
+{
+    border: 1px solid #e5e5e5;
+}
+table#gvCUSACTS th
+{
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+}
+table#gvCUSACTS td
+{
+    padding: 5px;
+}
+/*End*/

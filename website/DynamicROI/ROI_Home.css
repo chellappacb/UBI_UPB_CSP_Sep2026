@@ -1,0 +1,178 @@
+﻿/* ── Full-width banner ── */
+.banner-ROI {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    aspect-ratio: 15/7;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+/* Photo fills left ~60% */
+.banner-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    z-index: 0;
+}
+
+/* Gradient: photo visible left → fades to blue-purple → red-pink right */
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent 0%, transparent 30%, rgba(60,70,160,0.55) 48%, rgba(80,60,150,0.85) 58%, rgba(140,50,100,0.92) 80%, rgba(180,60,90,0.97) 100% );
+}
+
+/* Wheel sits right half */
+.wheel-area {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    aspect-ratio: 1;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spinIn 0.95s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+@keyframes spinIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.65) rotate(-15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+}
+
+.wheel-area svg {
+    width: 98%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+}
+
+/* Center label overlay inside wheel-area */
+.center-lbl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    width: 32%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.bank-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 3px;
+}
+
+.uicon {
+    width: clamp(18px,3.5%,30px);
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+    .uicon svg {
+        width: 65%;
+        height: 65%;
+    }
+
+.bname {
+    font-size: clamp(8px,1.5vw,18px);
+    font-weight: 900;
+    text-align: left;
+    line-height: 1.1;
+    width: 90%;
+}
+
+.bsub {
+    font-size: clamp(5px,0.85vw,11px);
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.4;
+    opacity: .9;
+}
+
+.bdiv {
+    width: 55%;
+    height: 1px;
+    background: rgba(255,255,255,.4);
+    margin: 5px auto;
+}
+
+.bprod {
+    font-size: clamp(9px,1.6vw,16px);
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Responsive */
+@media(max-width:860px) {
+    .bname {
+        width: 85%;
+    }
+
+    .banner-ROI {
+        aspect-ratio: 5/4;
+    }
+
+    .wheel-area {
+        width: 60%;
+        right: 50%;
+        transform: translateY(-50%) translateX(50%);
+    }
+
+    @keyframes spinIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50%) translateX(50%) scale(0.65);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(-50%) translateX(50%) scale(1);
+        }
+    }
+}
+
+@media(max-width:540px) {
+    .banner-ROI {
+        aspect-ratio: auto;
+        min-height: 500px;
+    }
+
+    .wheel-area {
+        width: 86%;
+        right: 6%;
+    }
+
+    .bname {
+        width: 86%;
+    }
+}
+
+.w-100{
+    width:100%;
+}

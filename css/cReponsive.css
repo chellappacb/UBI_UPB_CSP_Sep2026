@@ -1,0 +1,1435 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #e9e9e9;
+    font-family: chella;
+}
+@font-face
+{
+    font-family: "chella";
+    src: url("../font/Futura-Normal.woff") format("woff");
+    src: url("../font/ufonts.com_futura-normal.ttf") format("truetype");
+}
+
+inputbox {
+  -webkit-appearance: none;
+}
+
+.faq_tbl
+{
+    border-collapse: collapse;
+    width: 500px;
+}
+
+.submit { -webkit-appearance: none; }
+/*container*/
+.container
+{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 5px 7px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 7px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 7px -3px rgba(0,0,0,0.75);
+}
+/*container*/
+
+/*table td lbl txtboxtd width*/
+.tablewidth
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.tablewidth1
+{
+    width: 70%;
+    border-collapse: collapse;
+    border: 1px solid #d7d7d7;
+}
+.tdwidth
+{
+    width: 50%;
+}
+
+.tdwidth1
+{
+    width: 70%;
+    height: 30px;
+}
+.tdwidth2
+{
+    width: 30%;
+    height: 30px;
+}
+.lblwidth1 
+{
+    width: 70%;
+    padding: 3px;
+}
+.txtbwidth1 
+{
+    width: 30%;
+   
+}
+
+.lblwidth
+{
+    width: 45%;
+    padding: 3px;
+}
+.txtbwidth
+{
+    width: 55%;
+    padding: 8px 5px 5px 0;
+}
+.pa_lbl
+{
+    border: 1px solid #c1b5e0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #5f4f93;
+    background-color: #e0d9f3;
+    padding: 5px;
+}
+.RetrieveExistApp_tbl
+{
+    border: 1px solid #034489;
+    border-radius:5px;
+    height: 200px;
+    width: 500px;
+}
+/*table td width*/
+/*rbl*/
+.rblalign
+{
+    text-align: left;
+    padding-left: 45px;
+    color: #929494;
+    font-size: 18px;
+}
+/*table*/
+.contenttable
+{
+    width: 70%;
+    margin: 0 auto;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.pa_tbl
+{
+    width: 70%;
+    height: 80px;
+    background-color: #f7f7f7;
+    /*border: 1px solid #dad7d7;*/
+    border: 1px solid #da251c;
+    border-radius: 5px;
+}
+.pa_tbl1
+{
+    width: 67%;
+    height: 60px;
+    background-color: #f7f7f7;
+       /*border: 1px solid #dad7d7;*/
+    border: 1px solid #da251c;
+    border-radius: 5px;
+}
+
+/*table*/
+/*2,4 column*/
+.twocoloumn
+{
+    width: 57%;
+    vertical-align: top;
+}
+.twocoloumn1
+{
+    width: 43%;
+    vertical-align: top;
+}
+.add_two_col
+{
+    width:75%;
+}
+.add_two_col1
+{
+    width:25%;
+}
+.fourcolumn
+{
+    width: 25%;
+    height: 40px;
+}
+.threecol
+{
+    width: 20%;
+    font-size: 18px;
+    color: #767474;
+    padding-left: 10px;
+}
+.threecol_one
+{
+    width: 25%;
+    text-align: center;
+}
+.fscs_footer_col
+{
+    width: 70%;
+}
+.fscs_footer_col1
+{
+    width: 30%;
+}
+/*2 column*/
+/*heading title*/
+.heading_txt
+{
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-left: 20px;
+    font-family: chella;
+}
+.heading
+{
+    color: #EE1C23;
+    font-weight: bold;
+    font-family: chella;
+    text-align: right;
+    font-size: 20px;
+    padding: 0 50px 0 0;
+}
+.title
+{
+    color: #006cb8;
+    font-weight: bold;
+    font-family: chella;
+    text-align: left;
+    font-size: 19px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.stitle
+{
+    color: #006cb8;
+    font-weight: bold;
+    font-family: chella;
+    text-align: left;
+    font-size: 19px;
+    padding: 10px;
+    background-color: #F6F6F6;
+}
+.title3
+{
+    color: #006cb8;
+    font-weight: bold;
+    font-family: chella;
+    text-align: center;
+    font-size: 19px;
+    padding: 7px;
+}
+.subtitle
+{
+    color: #770f2a;
+    font-weight: bold;
+    font-family: calibri;
+    text-align: center;
+    font-size: 17px;
+    height: 30px;
+}
+.lbltxt
+{
+    font-family: chella;
+    color: #636363;
+    font-size: 15px;
+    padding: 8px 0 5px 15px;
+}
+.lbltxtc
+{
+    font-family: chella;
+    color: #636363;
+    font-size: 15px;
+    padding: 8px 0 5px 15px;
+}
+
+.taxtxt
+ {
+    color: #636363;
+    font-family: chella;
+    font-size: 15px;
+    padding: 8px 8px 5px 15px;
+    vertical-align: top;
+}
+.lbltxt1
+{
+    font-family: chella;
+    color: #636363;
+    font-size: 15px;
+    line-height:2em;
+ }
+.Reload
+{
+    color: #636363;
+    font-family: chella;
+    font-size: 13px;
+    font-weight: bold;
+}
+/*heading title*/
+
+/*textbox selectbox*/
+.txtbox
+{
+    border: 1px solid #666666;
+    border-radius: 5px;
+    color: #666666;
+    font-family: chella;
+    font-size: 14px;
+    height: 33px;
+    line-height: 33px;
+    text-indent: 2px;
+    
+}
+.txtbox.error
+{
+    border: 2px solid rgba(255, 0, 0, 0.6);
+}
+
+.lblbox.error {
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    border-radius: 3px;
+    color: #da251c;
+}
+.Utxtbox
+{
+    width: 90%;
+    height: 33px;
+    border-radius: 5px;
+     /*border: 1px solid #dddddd; margin-left: 45px; #cccc*/
+     border: 1px solid #666666; 
+    line-height: 33px;
+    /*text-indent: 10px;*/
+    font-family: chella;
+    font-size: 14px;
+    color: #666666;
+}
+.UtxtboxC
+{
+    border: 1px solid #666666;
+    border-radius: 5px;
+    color: #666666;
+    font-family: chella;
+    font-size: 14px;
+    height: 33px;
+    line-height: 33px;
+    /*text-indent: 10px;*/
+    width: 95%;
+}
+.Ubtxtbox
+{
+    width: 90%;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #666666; /* margin-left: 45px;*/
+    /*padding-left: 10px;*/
+    /*text-indent: 10px;*/
+    font-family: chella;
+font-size: 14px;
+color: #666666;
+}
+.Utxtbox.error
+{
+    border: 2px solid rgba(255, 0, 0, 0.6);
+}
+/*.Ustxtbox
+{
+    width: 70px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #666666;
+    text-indent: 10px;
+}*/
+.Ustxtbox
+{
+    border: 1px solid #666666;
+    border-radius: 5px;
+    height: 33px;
+    text-indent: 10px;
+    width: 70px;
+    font-family: chella;
+    font-size: 14px;
+    color: #666666;
+}
+.txtbox11
+{
+    width: 350px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #fff; /* margin-left: 45px;*/
+}
+
+
+
+.selectbox
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    height: 33px;
+    padding-bottom: 1px;
+    padding-left: 5px; /*padding-right: 18px !important;*/
+    padding-top: 1px;
+    width: 90%;
+    font-family: chella;
+    font-size: 15px;
+    color: #666666;
+}
+select::-ms-expand
+{
+    display: none !important;
+}
+.selectbox.error {
+    border: 2px solid rgba(255, 0, 0, 0.6);
+}
+.bselectbox
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #717171;
+    height: 33px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 18px !important;
+    padding-top: 1px;
+    width: 91%;
+    /*text-indent: 3px;*/
+    
+    font-family: chella;
+    font-size: 14px;
+    color: #666666;
+}
+.sselectbox
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    color: #717171;
+    height: 37px;
+    width: 80px;
+}
+.sselectbox1
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #717171;
+    height: 33px;
+    width: 28%;
+    text-indent: 3px;
+    font-family: chella;
+font-size: 13px;
+color: #666666;
+}
+.sselectbox1.error
+{
+    border: 1px solid red;
+    
+}
+.emailtxtbox
+{
+    border: 1px solid #666666;
+    border-radius: 5px;
+    color: #666666;
+    font-family: chella;
+    font-size: 14px;
+    height: 33px;
+    width: 220px;
+    text-indent: 5px;
+}
+/*textbox selectbox*/
+/*Button*/
+.search_btn
+{
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #006cb8;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #006cb8;
+    outline: 0;
+    font-family: chella;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+}
+.btn
+{
+    cursor: pointer; /*padding: 6px 16px;*/
+    background: #ff9999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #ff9999;
+    outline: 0;
+    font-family: chella;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600; /*margin-top: 10px;     margin-bottom: 10px;*/
+}
+.btn:hover
+{
+    cursor: pointer; /*padding: 6px 16px;*/
+    background: #5f4f93;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #5f4f93;
+    outline: 0;
+    font-family: chella;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600; /*margin-top: 10px;     margin-bottom: 10px;*/
+}
+
+/*Button*/
+/*File Upload*/
+.fileupload
+{
+    border: none;
+    width: 300px;
+    height: 30px;
+    margin-left: 0px;
+    background: #fff;
+    border-radius: 5px;
+}
+.sfileupload
+{
+    border: none;
+    width: 170px;
+    margin-left: 18px;
+    background: #fff;
+}
+/*File Upload*/
+/*lbl msg*/
+.lblSuccess
+{
+    color: Green;
+    text-align: center;
+}
+.lblError
+{
+    color: Red;
+    text-align: center;
+}
+/*lbl msg*/
+/*Footer*/
+.footer
+{
+    width: 100%;
+    background-color: #034489;
+    border: 1px solid #006cb8;
+    height: 80px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+}
+/*Footer*/
+/*hr*/
+.hr
+{
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+/*hr*/
+/*Required*/
+.req
+{
+    color: #ff0000;
+    font-size: 12px;
+}
+/*Required*/
+/*Panel*/
+.panel
+{
+    width: 100%;
+}
+/*Panel*/
+/*p*/
+.p
+{
+    color: #929494;
+    line-height: 22px;
+    text-align: justify;
+    color: #929494;
+    font-size: 18px;
+}
+/*p*/
+/*
+.logo
+{
+    /
+    padding: 0px 0px 0px 50px;
+}*/
+.rbl_txt
+{
+    color: #636363;
+    font-family: chella;
+    font-size: 15px;
+}
+.tcolumn
+{
+    padding-top: 10px;
+}
+
+/*Step*/
+.step_active
+{
+    width: 25%;
+    color: #3d4045;
+    border-right: 1px solid #9ca0a2;
+    border-right-style: dotted;
+    border-bottom: 2px solid #034489;
+    background-color: #f6f6f6;
+}
+.step
+{
+    width: 25%;
+    color: #dbdbdb;
+    border-right: 1px solid #9ca0a2;
+    border-right-style: dotted;
+}
+/*Step*/
+.bond_tbl
+{
+    padding: 0px;
+    border: 1px solid #034489;
+    height: 56px;
+    width: 70%;
+    border-radius: 5px;
+}
+.poptbl
+{
+    width: 50%;
+    height: 400px;
+    left: 0px;
+    background-color: #f1f5f9;
+    overflow: scroll;
+    border-top-right-radius: 5px;
+    border: 2px solid #034489;
+    border-radius: 5px;
+}
+.Preview_tbl_twocol
+{
+    width: 60%;
+    vertical-align: top;
+    margin: 0 auto;
+}
+
+.Preview_tbl_twocol1
+{
+    width: 40%;
+    vertical-align: top;
+    margin: 0 auto;
+}
+
+.boldtext
+{
+    font-family: chella;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    padding-left: 5px;
+    margin-left: 0px;
+}
+.confirm_tbl
+{
+    width: 65%;
+    margin: 0 auto;
+    background-color: #f1f5f9;
+    border-radius: 5px;
+    border: 1px solid #00579c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.confirm_txt
+{
+    line-height: 25px;
+    color: #48494a;
+    font-family: chella;
+}
+.display
+{
+    visibility: hidden;
+    font-size: 1.2em;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+    color: #3d4045;
+}
+.addtop
+{
+    margin-top: 0px;
+}
+.two_preview
+{
+ width: 50%;   
+}
+.pewtxt
+{
+    color:#000000;
+    font-family:Trebuchet MS,Segoe UI,Verdana,Arial,sans-serif,Helvetica;
+    font-size: 13px;
+    font-weight:bold;
+    margin-left:5px;
+}
+@media screen and ( max-width: 1120px )
+{
+    .container
+    {
+        width: 90%;
+    }
+    .contenttable
+    {
+        width: 90%;
+    }
+
+    .tablewidth1
+    {
+        width: 95%;
+    }
+    .Utxtbox
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+    }
+    .UtxtboxC
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+    }
+    .selectbox
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+        border: 1px solid #666666;
+        border-radius: 3px;
+        color: #717171;
+        height: 35px;
+        padding-bottom: 1px;
+        padding-left: 0;
+        padding-right: 18px !important;
+        padding-top: 1px;
+        width: 96%;
+        margin-left: 3px;
+    }
+}
+
+@media screen and ( max-width: 1000px )
+{
+    .container
+    {
+        width: 90%;
+    }
+    .twocoloumn
+    {
+        width: 100%;
+        float: left;
+    }
+    .twocoloumn1
+    {
+        width: 100%;
+        float: left;
+    }
+    .bond_tbl
+    {
+        width: 90%;
+    }
+
+
+    .poptbl
+    {
+        width: 70%;
+    }
+    .CustomValidatorCalloutStyle
+    {
+        left: 60% !important;
+    }
+
+    .pa_tbl
+    {
+        width: 100%;
+    }
+    .pa_tbl1
+    {
+        width: 95%;
+    }
+    .display
+    {
+        visibility: visible;height: 40px;
+    }
+    .heading_txt
+    {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .hide
+    {
+        display: none;
+    }
+    .addtop
+    {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 750px)
+{
+    .container
+    {
+        width: 90%;
+    }
+    /*.logo
+    {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }*/
+    .heading_txt
+    {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .heading
+    {
+        padding: 0 0px 0 0;
+        text-align: center;
+    }
+    .tablewidth
+    {
+        width: 100%;
+    }
+    .tablewidth1
+    {
+        width: 95%;
+    }
+    .twocoloumn
+    {
+        width: 100%;
+        float: left;
+    }
+    .twocoloumn1
+    {
+        width: 100%;
+        float: left;
+    }
+    .add_two_col
+    {
+        width: 100%;
+        float: left;
+    }
+    .add_two_col1
+    {
+        width: 100%;
+        float: left;
+    }
+    .fscs_footer_col
+    {
+        width: 100%;
+        float: left;
+    }
+    .fscs_footer_col1
+    {
+        width: 95%;
+        float: left;
+    }
+
+
+    .pa_tbl
+    {
+        width: 100%;
+    }
+    .pa_tbl1
+    {
+        width: 95%;
+    }
+    .RetrieveExistApp_tbl
+    {
+        width: 95%;
+    }
+
+    .threecol
+    {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .threecol_one
+    {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .tdwidth
+    {
+        width: 100%;
+        float: left;
+    }
+    .tcolumn
+    {
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
+    .contenttable
+    {
+        width: 90%;
+    }
+
+    .lblwidth
+    {
+        width: 100%;
+        float: left;
+    }
+    .lbltxt
+    {
+        color: #636363;
+        font-size: 15px;
+        padding-left: 9px;
+    }
+    .lbltxtc
+    {
+        color: #636363;
+        font-size: 15px;
+        padding-left: 2px;
+    }
+    .taxtxt
+    {
+        color: #636363;
+        font-size: 15px;
+        padding-left: 2px;
+    }
+    .txtbwidth
+    {
+        width: 100%;
+        float: left;
+    }
+    .rblalign
+    {
+        text-align: left;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .Utxtbox
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+        margin-left: 4px;
+    }
+    .UtxtboxC
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+        margin-left: 4px;
+    }
+    .Ubtxtbox
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666; /* margin-left: 45px;*/
+        margin-left: 4px;
+    }
+    .Ustxtbox
+    {
+        /*width: 31.6%;*/
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+    }
+    .fileupload
+    {
+        border: none;
+        width: 95%;
+        height: 30px;
+        margin-left: 0px;
+        background: #fff;
+        border-radius: 5px;
+    }
+    .sfileupload
+    {
+        border: none;
+        width: 95%;
+        margin-left: 0px;
+        background: #fff;
+    }
+
+    .fourcolumn
+    {
+        width: 100%;
+        float: left;
+    }
+    .selectbox
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+        border: 1px solid #666666;
+        border-radius: 3px;
+        color: #717171;
+        height: 35px;
+        padding-bottom: 1px;
+        padding-left: 0;
+        padding-right: 18px !important;
+        padding-top: 1px;
+        width: 96%;
+        margin-left: 3px;
+    }
+    .bselectbox
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+        border: 1px solid #666666;
+        border-radius: 3px;
+        color: #717171;
+        height: 35px;
+        padding-bottom: 1px;
+        padding-right: 18px !important;
+        padding-top: 1px;
+        width: 96%;
+        margin-left: 4px;
+    }
+    .step_active
+    {
+        border-right: none;
+        border-right-style: none;
+    }
+
+    .bond_tbl
+    {
+        width: 90%;
+    }
+    .CustomValidatorCalloutStyle
+    {
+        left: 20% !important;
+    }
+    .poptbl
+    {
+        width: 70%;
+    }
+    .Preview_tbl_twocol
+    {
+        width: 100%;
+        float: left;
+    }
+
+    .Preview_tbl_twocol1
+    {
+        width: 100%;
+        float: left;
+        padding-top: 20px;
+    }
+
+    .confirm_tbl
+    {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .confirm_txt
+    {
+        text-align: justify;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .display
+    {
+        visibility: visible;
+        height: 40px;
+    }
+    .hide
+    {
+        display: none;
+    }
+    .lblalign 
+    {
+        margin-left: 6px !important;
+    }
+    .aln_left
+    {
+        margin-left:4px;
+    }
+    .addtop
+    {
+        margin-top: 30px;
+    }
+    .faq_tbl
+    {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 480px)
+{
+    .container
+    {
+        width: 97%;
+    }
+    .tablewidth
+    {
+        width: 100%;
+    }
+    .tablewidth1
+    {
+        width: 95%;
+    }
+    .twocoloumn
+    {
+        width: 100%;
+        float: left;
+    }
+    .twocoloumn1
+    {
+        width: 100%;
+        float: left;
+    }
+    .two_preview
+    {
+        width: 100%;
+        float: left; 
+    }
+    .add_two_col
+    {
+        width: 100%;
+        float: left;
+    }
+    .add_two_col1
+    {
+        width: 100%;
+        float: left;
+    }
+    .fscs_footer_col
+    {
+        width: 100%;
+        float: left;
+    }
+    .fscs_footer_col1
+    {
+        width: 100%;
+        float: left;
+    }
+
+    .pa_tbl
+    {
+        width: 100%;
+    }
+    .pa_tbl1
+    {
+        width: 95%;
+    }
+    .RetrieveExistApp_tbl
+    {
+        width: 95%;
+    }
+
+    .threecol
+    {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .threecol_one
+    {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .tdwidth
+    {
+        width: 100%;
+        float: left;
+    }
+    .tdwidth1
+    {
+        width: 95%;
+        float: left;
+    }
+    .tdwidth2
+    {
+        width: 95%;
+        float: left;
+    }
+
+/*
+    .logo
+    {
+        width: 60%;
+    }*/
+    .heading_txt
+    {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .heading
+    {
+        padding: 0 0px 0 0;
+        text-align: center;
+    }
+    .contenttable
+    {
+        width: 90%;
+    }
+
+    .lblwidth
+    {
+        width: 100%;
+        float: left;
+    }
+    .lbltxt
+    {
+        color: #636363;
+        font-size: 15px;
+        padding-left: 8px;
+    }
+    .lbltxtc
+    {
+        color: #636363;
+        font-size: 15px;
+        padding-left: 2px;
+    }
+    .taxtxt
+    {
+        color: #636363;
+        font-size: 15px;
+        padding-left: 2px;
+    }
+    .txtbwidth
+    {
+        width: 100%;
+        float: left;
+    }
+    .rblalign
+    {
+        text-align: left;
+        color: #929494;
+        font-size: 18px;
+        width: 95%;
+    }
+    .Utxtbox
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666; /**/
+        margin-left: 4px;
+    }
+    .UtxtboxC
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #dddddd; /**/
+        margin-left: 4px;
+    }
+    .Ubtxtbox
+    {
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #666666; /* margin-left: 45px;*/
+        margin-left: 4px;
+    }
+    .Ustxtbox
+    {
+        /*width: 15%;*/
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+    }
+    .selectbox
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+        border: 1px solid #666666;
+        border-radius: 3px;
+        color: #717171;
+        height: 35px;
+        padding-bottom: 1px;
+        padding-left: 0;
+        padding-right: 18px !important;
+        padding-top: 1px;
+        width: 97%;
+    }
+    .bselectbox
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url("../website/images/down-arrow.png") no-repeat scroll right center;
+        border: 1px solid #666666;
+        border-radius: 3px;
+        color: #717171;
+        height: 35px;
+        padding-bottom: 1px;
+        padding-right: 18px !important;
+        padding-top: 1px;
+        width: 97%;
+        margin-left: 4px;
+    }
+    .fileupload
+    {
+        border: none;
+        width: 95%;
+        height: 30px;
+        margin-left: 0px;
+        background: #fff;
+        border-radius: 5px;
+    }
+    .sfileupload
+    {
+        border: none;
+        width: 95%;
+        margin-left: 0px;
+        background: #fff;
+    }
+    .fourcolumn
+    {
+        width: 100%;
+        float: left;
+    }
+    .p
+    {
+        color: #929494;
+        line-height: 22px;
+        text-align: justify;
+        color: #929494;
+        font-size: 16px;
+    }
+    .tcolumn
+    {
+        width: 100%;
+        height: 100%;
+        line-height: 35px;
+        float: left;
+    }
+
+    .step_active
+    {
+        border-right: none;
+        border-right-style: none;
+    }
+    .CustomValidatorCalloutStyle
+    {
+        left: 20% !important;
+    }
+    .ajax__validatorcallout_popup_table
+    {
+        width: 190px !important;
+    }
+    .ajax__validatorcallout_error_message_cell
+    {
+        font-size: 12px !important;
+    }
+
+
+    .bond_tbl
+    {
+        width: 90%;
+    }
+    .poptbl
+    {
+        width: 70%;
+    }
+
+    .Preview_tbl_twocol
+    {
+        width: 100%;
+        float: left;
+    }
+
+    .Preview_tbl_twocol1
+    {
+        width: 100%;
+        float: left;
+        padding-top: 20px;
+    }
+
+    .boldtext
+    {
+        padding-left: 1px;
+    }
+    .confirm_tbl
+    {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .confirm_txt
+    {
+        text-align: justify;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .display
+    {
+        visibility: visible;
+        height: 40px;
+    }
+    .hide
+    {
+        display: none;        
+    }
+    
+    .lblalign 
+    {
+        margin-left: 6px !important;
+    }
+    .aln_left
+    {
+        margin-left:4px;
+    }
+    .addtop
+    {
+        margin-top: 30px;
+    }
+    .faq_tbl
+    {
+        width: 100%;
+    }
+    .faq_tbl td
+    {
+        border: 1px solid #005793;
+        padding: 3px;
+    }
+}

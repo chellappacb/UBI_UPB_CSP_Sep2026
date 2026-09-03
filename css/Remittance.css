@@ -1,0 +1,68 @@
+﻿
+/* Yogesh for remittance CSS */
+.DarkPinkheadRemit
+{
+    font-family: Trebuchet MS, Segoe UI, Arial, Verdana, sans-serif, Helvetica;
+    font-size: 15px;
+    color: #971410;
+    font-weight: bold;
+}
+
+.boldtextRemit
+{
+    font-family: Trebuchet MS, Segoe UI,Verdana, Arial, sans-serif, Helvetica;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+    padding-left: 5px;
+    margin-left: 0px;
+}
+
+.bodytextboldRemit
+{
+    font-family: Arial , Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 14px;
+    color: #000000;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px;
+    margin-left: 40px;
+    text-align: left;
+}
+.txtboxRemit
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    text-align: left;
+    border: 1px solid #a5acb2;
+    padding-left: 1px;
+}
+
+.ddlRemit
+{
+    font-family: Trebuchet MS, Segoe UI, Verdana, Arial, sans-serif, Helvetica;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    padding-left: 1px;
+}
+.DOrangeheadRemit
+{
+    font-family: Trebuchet MS, Segoe UI,Verdana, Arial, sans-serif, Helvetica;
+    font-size: 15px;
+    color: #9F2925;
+    font-weight: bold;
+    padding: 5px 5px 2px 5px;
+}
+
+.Rtxtalert
+{
+    font-family: Arial, Verdana, Trebuchet MS, sans-serif, Helvetica;
+    font-size: 14px;
+    color: #BE0000;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Yogesh for remittance CSS */

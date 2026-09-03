@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:callcredit.co.uk/soap:callcreditapi" elementFormDefault="qualified" targetNamespace="urn:callcredit.co.uk/soap:callcreditapi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="callcreditheaders" type="tns:callcreditheaders" />
+  <xs:complexType name="callcreditheaders">
+    <xs:annotation>
+      <xs:documentation>Callcredit Soap Header</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="company" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The login name of the organisation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="username" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The user's login identity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="password" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The user's password</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="application" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Application</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
