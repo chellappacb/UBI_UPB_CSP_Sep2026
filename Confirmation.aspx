@@ -91,6 +91,7 @@
     </form>
     <script type="text/javascript" src="website/js/bootstrap.bundle.min.js"> </script>
     <script src="javascript/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="JS/CSP/OnClickHandlers.js"></script>
     <script type="text/javascript" src="JS/CSP/Home.js" nonce="ihYxAijSER-YFSUxCDJbag"></script>
 </body>
 </html>

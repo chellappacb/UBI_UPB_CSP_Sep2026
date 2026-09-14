@@ -346,6 +346,7 @@
             });
         });
     </script>
+       <script type="text/javascript" src="JS/CSP/OnClickHandlers.js"></script>
        <script type="text/javascript" src="JS/CSP/Home.js" nonce="ihYxAijSER-YFSUxCDJbag"></script>
 </body>
 </html>

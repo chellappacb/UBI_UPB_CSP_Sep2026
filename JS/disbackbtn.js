@@ -2,7 +2,6 @@ function noBack(){window.history.forward()}
 noBack();
 window.onload=noBack;
 window.onpageshow=function(evt){if(evt.persisted)noBack()}
-window.onunload = function() { void (0) }
 
 
 function clickIE() {
@@ -25,6 +24,6 @@ if (document.layers)
     { document.captureEvents(Event.MOUSEDOWN); document.DEFANGED_Onmousedown = clickNS; }
 else
     { document.DEFANGED_Onmouseup = clickNS; document.oncontextmenu = clickIE; }
-document.oncontextmenu = new Function("return false")
+document.oncontextmenu = function () { return false; };
 
 

@@ -550,6 +550,7 @@
         var sDepMinAmt = parseInt(document.getElementById('<%= DepositMinAmt.ClientID %>').value);
         var sDepMaxAmt = parseInt(document.getElementById('<%= DepositMaxAmt.ClientID %>').value);
     </script>
+    <script type="text/javascript" src="JS/CSP/OnClickHandlers.js"></script>
     <script type="text/javascript" src="JS/CSP/Home.js" nonce="ihYxAijSER-YFSUxCDJbag"></script>
 </body>
 </html>

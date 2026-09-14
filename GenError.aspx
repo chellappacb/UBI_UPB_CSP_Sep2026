@@ -25,7 +25,7 @@
             sessionTimeout = sessionTimeout - 1;
 
             if (sessionTimeout >= 0)
-                window.setTimeout("DisplaySessionTimeout()", 1000);
+                window.setTimeout(DisplaySessionTimeout, 1000);
             else {
                 window.open("Index.aspx", '_self');
                 //closeWindow();                                 

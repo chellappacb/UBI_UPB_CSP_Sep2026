@@ -209,6 +209,7 @@
     <script type="text/javascript" src="javascript/JSValidation.js"></script>
     <script type="text/javascript" src="javascript/popper.min.js"></script>
     <script type="text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="JS/CSP/OnClickHandlers.js"></script>
     <script type="text/javascript" src="JS/CSP/Home.js" nonce="ihYxAijSER-YFSUxCDJbag"></script>
 
     <%--OTP Timer--%>
