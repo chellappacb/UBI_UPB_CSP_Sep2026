@@ -36,7 +36,7 @@
             // navigations on Index/AccountDetails/ApplicantDetails. Removing it would require
             // eliminating UpdatePanel/ToolkitScriptManager app-wide, out of scope here.
             string csp = "connect-src 'self'; " +
-                         "img-src 'self' https://www.unionpremierbond.unionbankofindiauk.co.uk; " +
+                         "img-src 'self' https://ubi-upb-dev.uat.macroglobal.io/; " +
                          "style-src 'self'; " +
                          "object-src 'none'; " +
                          "script-src 'self' 'unsafe-eval'; " +
@@ -60,7 +60,7 @@
             // it, script-src-attr violations report generic line=null/column=1 for every
             // attribute, which can't distinguish one onclick from another.
             string reportOnlyCsp = "connect-src 'self'; " +
-                                   "img-src 'self' https://www.unionpremierbond.unionbankofindiauk.co.uk; " +
+                                   "img-src 'self' https://ubi-upb-dev.uat.macroglobal.io/; " +
                                    "style-src 'self'; " +
                                    "object-src 'none'; " +
                                    "script-src 'self' 'strict-dynamic' 'nonce-" + nonce + "' 'report-sample'; " +

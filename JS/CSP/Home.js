@@ -453,6 +453,72 @@ document.addEventListener('click', function (e) {
         console.warn('CSP: no registered handler for ' + attr + '="' + value + '" (setAttribute intercepted) on', this);
     };
 
+    // Mirrors CspResponseFilter.cs's EventHandlerAttrRegex rename (see its class comment,
+    // point 2) for the one content type that filter can never reach: an UpdatePanel
+    // async-postback response. Global.asax's AttachCspFilter deliberately skips that filter
+    // for these responses (its own comment explains why - the wire format is
+    // length-prefixed per segment, and a fresh nonce could never be valid for it anyway), so
+    // this markup still carries live onXXX="..." attributes verbatim when it reaches the
+    // browser. PageRequestManager applies it via an innerHTML-style write, which the HTML
+    // parser processes directly - never calling Element.prototype.setAttribute - so the
+    // setAttribute() override above cannot see it either. Matched the same way as the
+    // server-side regex - preceded by whitespace (so "buttononclick" can't match mid-word),
+    // followed by "=" plus an opening quote, never touching the quoted value itself - but
+    // written without a lookbehind assertion (broader browser support) by capturing the
+    // preceding whitespace and re-emitting it in the replacement instead.
+    var EVENT_HANDLER_ATTR_RE = new RegExp(
+        '(\\s)(' + OBSERVED_ATTRS.join('|') + ')(?=\\s*=\\s*["\'])',
+        'gi'
+    );
+
+    function renameEventHandlerAttrs(html) {
+        return html.replace(EVENT_HANDLER_ATTR_RE, '$1data-$2');
+    }
+
+    // script-src-attr is checked synchronously by the browser at the exact moment the HTML
+    // parser writes an onXXX attribute - the same timing problem the setAttribute() override
+    // above solves for script-driven writes, but here the write comes from parsing a string
+    // handed to innerHTML, which no MutationObserver or setAttribute override can intercept
+    // in time. The only way to prevent it is to rewrite that string before the native
+    // innerHTML setter (and therefore the parser) ever sees it.
+    //
+    // Sys.WebForms.PageRequestManager's pageLoading/pageLoaded events are public, documented
+    // MS AJAX API, not an internal implementation detail: pageLoading fires synchronously
+    // immediately before panel content is written, with args.get_panelsUpdating() naming
+    // exactly which elements are about to change; pageLoaded fires immediately after, once
+    // they have. Recording those elements only for the brief synchronous window between the
+    // two - and only transforming innerHTML writes that land on one of them - keeps this
+    // override's effect scoped to exactly the operation it exists for, not a permanent,
+    // page-wide behavior change. Elements outside that window, or not in that set, pass
+    // through to the native setter completely untouched.
+    var panelsBeingUpdated = null;
+
+    if (window.Sys && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+        prm.add_pageLoading(function (sender, args) {
+            panelsBeingUpdated = args.get_panelsUpdating();
+        });
+
+        prm.add_pageLoaded(function () {
+            panelsBeingUpdated = null;
+        });
+    }
+
+    var nativeInnerHTMLDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+
+    Object.defineProperty(Element.prototype, 'innerHTML', {
+        configurable: true,
+        enumerable: nativeInnerHTMLDescriptor.enumerable,
+        get: nativeInnerHTMLDescriptor.get,
+        set: function (html) {
+            if (panelsBeingUpdated && typeof html === 'string' && panelsBeingUpdated.indexOf(this) !== -1) {
+                html = renameEventHandlerAttrs(html);
+            }
+            nativeInnerHTMLDescriptor.set.call(this, html);
+        }
+    });
+
     function rewireAll() {
         // Dedicated parsers run first so they consume the attributes they recognize before
         // the generic named-function map gets a chance to log a false "no registered
